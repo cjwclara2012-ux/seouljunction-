@@ -70,7 +70,7 @@
 <body class="bg-midnight text-slate-100 font-sans overflow-x-hidden antialiased">
 
     <script>
-        // Symmetrical Two-Event CMS Configuration State mapping directly to the uploaded file names
+        // Updated Image Assets CMS Configuration
         window.seoulJunctionConfig = {
             metadata: {
                 passcode: "54028803"
@@ -82,120 +82,28 @@
                 slogan_kr: "일상 탈출, 힙한 주말의 시작",
                 desc_en: "Tired of superficial clubs and awkward meetups? Escape to our premium language & cultural salon. Meet verified local professionals, expats, and Koreans under gorgeous city lights.",
                 desc_kr: "시끄럽고 가벼운 클럽이나 어색한 밋업에 지치셨나요? 이제 매주 금요일과 토요일 저녁, 감성적인 공간에서 신원 확실한 홍콩 글로벌 직장인, 로컬 현지인들과 함께 힙한 에너지를 나눠보세요.",
-                // Interactive Polaroid gallery sequence with customized handwritten captions
                 gallery: [
-                    {
-                        img: "1. arrival&check-in.png",
-                        cap_en: "\"1. Welcome & Check-In! Premium neon aura\" 🏷️",
-                        cap_kr: "\"1. 서울 포차 감성의 힙하고 설레는 체크인 라운지!\" 🏷️"
-                    },
-                    {
-                        img: "2. settle down&write name tag.png",
-                        cap_en: "\"2. Custom 3-Sec Name Tag! Write your details\" 🏷️",
-                        cap_kr: "\"2. 내가 좋아하는 한식과 배우고픈 실전 유행어 부착!\" 🏷️"
-                    },
-                    {
-                        img: "3.somaeck ratio brewing.png",
-                        cap_en: "\"3. POV: Your Friday Escape Starts Here...\" ✨",
-                        cap_kr: "\"3. 오늘 밤, 홍콩 속 특별한 소맥 살롱이 열립니다...\" ✨"
-                    },
-                    {
-                        img: "4.sincere ice-breaker cheer.png",
-                        cap_en: "\"4. Measure the perfect Somaek gold ratio!\" 🍺",
-                        cap_kr: "\"4. 소맥 황금 가이드를 보며 다 함께 시원하게 짠!\" 🍺"
-                    },
-                    {
-                        img: "5. speak only in korean.png",
-                        cap_en: "\"5. Speak Only in Korean card game!\" 🃏",
-                        cap_kr: "\"5. 이거 실화냐? 킹받네? 한국 최신 유행어 대격돌!\" 🃏"
-                    },
-                    {
-                        img: "6. clang-clang bell  ring.png",
-                        cap_en: "\"6. Clang-Clang! Symmetrical tables rotation!\" 🔄",
-                        cap_kr: "\"6. 댕-댕-! 벨소리와 함께 다채로운 소셜 로테이션!\" 🔄"
-                    },
-                    {
-                        img: "7. real cantonese . english  exchange.png",
-                        cap_en: "\"7. Real Cantonese & practical slangs study!\" 🌐",
-                        cap_kr: "\"7. 현지 친구에게 직접 배우는 뉘앙스 만점 광둥어!\" 🌐"
-                    },
-                    {
-                        img: "8. photo session &contact exchange.png",
-                        cap_en: "\"8. Beautiful group photo & exchange contacts!\" 📸",
-                        cap_kr: "\"8. 잊지 못할 불금 추억 소장, 인스타 QR 교환 타임!\" 📸"
-                    }
+                    { img: "1. png_4.png", cap_en: "\"1. Welcome & Check-In! Premium neon aura\" 🏷️", cap_kr: "\"1. 서울 포차 감성의 힙하고 설레는 체크인 라운지!\" 🏷️" },
+                    { img: "2. png_4.png", cap_en: "\"2. Custom 3-Sec Name Tag! Write your details\" 🏷️", cap_kr: "\"2. 내가 좋아하는 한식과 배우고픈 실전 유행어 부착!\" 🏷️" },
+                    { img: "3. png_4.png", cap_en: "\"3. POV: Your Friday Escape Starts Here...\" ✨", cap_kr: "\"3. 오늘 밤, 홍콩 속 특별한 소맥 살롱이 열립니다...\" ✨" },
+                    { img: "4. png_4.png", cap_en: "\"4. Measure the perfect Somaek gold ratio!\" 🍺", cap_kr: "\"4. 소맥 황금 가이드를 보며 다 함께 시원하게 짠!\" 🍺" },
+                    { img: "5. png_4.png", cap_en: "\"5. Speak Only in Korean card game!\" 🃏", cap_kr: "\"5. 이거 실화냐? 킹받네? 한국 최신 유행어 대격돌!\" 🃏" },
+                    { img: "6. png_4.png", cap_en: "\"6. Clang-Clang! Symmetrical tables rotation!\" 🔄", cap_kr: "\"6. 댕-댕-! 벨소리와 함께 다채로운 소셜 로테이션!\" 🔄" },
+                    { img: "7. png_4.png", cap_en: "\"7. Real Cantonese & practical slangs study!\" 🌐", cap_kr: "\"7. 현지 친구에게 직접 배우는 뉘앙스 만점 광둥어!\" 🌐" },
+                    { img: "8. png_4.png", cap_en: "\"8. Beautiful group photo & exchange contacts!\" 📸", cap_kr: "\"8. 잊지 못할 불금 추억 소장, 인스타 QR 교환 타임!\" 📸" }
                 ]
             },
-            // Interactive Program Flow Timeline Slideshow
             programFlowGallery: [
-                {
-                    img: "1. arrival&check-in.png",
-                    title_en: "1. Arrival & Check-In",
-                    title_kr: "1. 웰컴 입장 및 체크인 웰컴 체크 🏷️",
-                    desc_en: "Step into our warm neon Pocha. Settle in, grab your name cards, and get ready for a memorable weekend night.",
-                    desc_kr: "아늑하고 힙한 조명의 정주포차 입장! 나만의 한글 네임택을 받고 오늘 대화할 매칭 파트너를 기대해 보세요."
-                },
-                {
-                    img: "2. settle down&write name tag.png",
-                    title_en: "2. Settle Down & Write Name Tag",
-                    title_kr: "2. 나만의 3초 네임택 완성 🏷️",
-                    desc_en: "Choose your favorite Korean food and write a funny Korean slang you want to teach or learn.",
-                    desc_kr: "내가 제일 좋아하는 한국 음식과 함께 오늘 밤 꼭 써먹어보고 싶은 최신 유행어를 적어 가슴에 부착합니다."
-                },
-                {
-                    img: "3.somaeck ratio brewing.png",
-                    title_en: "3. Somaek Ratio Brewing",
-                    title_kr: "3. 소맥 황금비율 주조 🍺",
-                    desc_en: "Mix your welcome Somaek using our custom illustrated ratio guidelines. Stun it with a spoon for rich foam!",
-                    desc_kr: "테이블에 놓인 가이드를 따라 소주와 카스를 황금 비율로 믹싱하고, 숟가락 타격으로 시원하게 맥주 거품을 일으켜 보세요."
-                },
-                {
-                    img: "4.sincere ice-breaker cheer.png",
-                    title_en: "4. Sincere Ice-Breaker Cheers",
-                    title_kr: "4. 긴장을 깨뜨리는 첫 건배 🥂",
-                    desc_en: "Say cheers loudly with your matching table partners. The ice melts instantly under warm neon glows.",
-                    desc_kr: "새롭게 만난 파트너들과 잔을 부딪치며 다 함께 외쳐보세요! \"Geonbae!\" 낯선 공기가 금세 따뜻함으로 채워집니다."
-                },
-                {
-                    img: "5. speak only in korean.png",
-                    title_en: "5. Speak Only in Korean!",
-                    title_kr: "5. 킹받네? 한국어 유행어 타임 🃏",
-                    desc_en: "Flip curated slang cards. Guess hilarious expressions while native Koreans guide your funny situational dramas.",
-                    desc_kr: "K-드라마 속 리얼 한국어 유행어를 맞추는 시간! 네이티브 친구들의 디렉션 하에 뉘앙스를 배우며 리얼 소통을 연습합니다."
-                },
-                {
-                    img: "6. clang-clang bell  ring.png",
-                    title_en: "6. Symmetrical Table Rotation",
-                    title_kr: "6. 타종과 테이블 회전 🔄",
-                    desc_en: "At the sound of the brass bell, rotate clockwise to meet a fresh dynamic group over authentic bites.",
-                    desc_kr: "호스트가 울리는 맑은 황동 종소리! 이제 테이블 회전 시간입니다. 자리를 이동해 새로운 파트너들과 또 다른 자극을 나눠보세요."
-                },
-                {
-                    img: "7. real cantonese . english  exchange.png",
-                    title_en: "7. Real Cantonese Exchange",
-                    title_kr: "7. 홍콩 로컬 실전 광둥어 학습 🌐",
-                    desc_en: "Draw characters on custom desk mats. Learn practical street slang from local Cantonese-speaking professionals.",
-                    desc_kr: "이번엔 홍콩 로컬 친구들의 차례! 홍콩의 맛집 추천과 책에서는 배울 수 없는 생생한 실전 광둥어를 함께 적고 말해봅니다."
-                },
-                {
-                    img: "8. photo session &contact exchange.png",
-                    title_en: "8. Photo Session & Contact Lock",
-                    title_kr: "8. 단체 촬영 및 연락처 교환 📸",
-                    desc_en: "Capture memorable moments with a full group picture and exchange Instagram handles or contact nodes.",
-                    desc_kr: "즐거운 만남을 마무리하며 어깨동무하고 한 컷! 이별의 아쉬움을 달래줄 인스타 핸들과 연락처를 주고받습니다."
-                }
+                { img: "1. png_4.png", title_en: "1. Arrival & Check-In", title_kr: "1. 웰컴 입장 및 체크인 웰컴 체크 🏷️", desc_en: "Step into our warm neon Pocha. Settle in, grab your name cards, and get ready for a memorable weekend night.", desc_kr: "아늑하고 힙한 조명의 정주포차 입장! 나만의 한글 네임택을 받고 오늘 대화할 매칭 파트너를 기대해 보세요." },
+                { img: "2. png_4.png", title_en: "2. Settle Down & Write Name Tag", title_kr: "2. 나만의 3초 네임택 완성 🏷️", desc_en: "Choose your favorite Korean food and write a funny Korean slang you want to teach or learn.", desc_kr: "내가 제일 좋아하는 한국 음식과 함께 오늘 밤 꼭 써먹어보고 싶은 최신 유행어를 적어 가슴에 부착합니다." },
+                { img: "3. png_4.png", title_en: "3. Somaek Ratio Brewing", title_kr: "3. 소맥 황금비율 주조 🍺", desc_en: "Mix your welcome Somaek using our custom illustrated ratio guidelines. Stun it with a spoon for rich foam!", desc_kr: "테이블에 놓인 가이드를 따라 소주와 카스를 황금 비율로 믹싱하고, 숟가락 타격으로 시원하게 맥주 거품을 일으켜 보세요." },
+                { img: "4. png_4.png", title_en: "4. Sincere Ice-Breaker Cheers", title_kr: "4. 긴장을 깨뜨리는 첫 건배 🥂", desc_en: "Say cheers loudly with your matching table partners. The ice melts instantly under warm neon glows.", desc_kr: "새롭게 만난 파트너들과 잔을 부딪치며 다 함께 외쳐보세요! \"Geonbae!\" 낯선 공기가 금세 따뜻함으로 채워집니다." },
+                { img: "5. png_4.png", title_en: "5. Speak Only in Korean!", title_kr: "5. 킹받네? 한국어 유행어 타임 🃏", desc_en: "Flip curated slang cards. Guess hilarious expressions while native Koreans guide your funny situational dramas.", desc_kr: "K-드라마 속 리얼 한국어 유행어를 맞추는 시간! 네이티브 친구들의 디렉션 하에 뉘앙스를 배우며 리얼 소통을 연습합니다." },
+                { img: "6. png_4.png", title_en: "6. Symmetrical Table Rotation", title_kr: "6. 타종과 테이블 회전 🔄", desc_en: "At the sound of the brass bell, rotate clockwise to meet a fresh dynamic group over authentic bites.", desc_kr: "호스트가 울리는 맑은 황동 종소리! 이제 테이블 회전 시간입니다. 자리를 이동해 새로운 파트너들과 또 다른 자극을 나눠보세요." },
+                { img: "7. png_4.png", title_en: "7. Real Cantonese Exchange", title_kr: "7. 홍콩 로컬 실전 광둥어 학습 🌐", desc_en: "Draw characters on custom desk mats. Learn practical street slang from local Cantonese-speaking professionals.", desc_kr: "이번엔 홍콩 로컬 친구들의 차례! 홍콩의 맛집 추천과 책에서는 배울 수 없는 생생한 실전 광둥어를 함께 적고 말해봅니다." },
+                { img: "8. png_4.png", title_en: "8. Photo Session & Contact Lock", title_kr: "8. 단체 촬영 및 연락처 교환 📸", desc_en: "Capture memorable moments with a full group picture and exchange Instagram handles or contact nodes.", desc_kr: "즐거운 만남을 마무리하며 어깨동무하고 한 컷! 이별의 아쉬움을 달래줄 인스타 핸들과 연락처를 주고받습니다." }
             ],
-            // Custom Ticket Invitation Slideshow list of photos (Aligned beautifully with actual uploaded images)
-            ticketGallery: [
-                "1. arrival&check-in.png",
-                "2. settle down&write name tag.png",
-                "3.somaeck ratio brewing.png",
-                "4.sincere ice-breaker cheer.png",
-                "5. speak only in korean.png",
-                "6. clang-clang bell  ring.png",
-                "7. real cantonese . english  exchange.png",
-                "8. photo session &contact exchange.png"
-            ],
+            ticketGallery: ["1. png_4.png", "2. png_4.png", "3. png_4.png", "4. png_4.png", "5. png_4.png", "6. png_4.png", "7. png_4.png", "8. png_4.png"],
             refund: {
                 policy_en: "Cancellation Policy:\n• 7 Days Before: 100% Full Refund\n• 3 Days Before: 50% Refund\n• 1 Day Before: 30% Refund\n• Same Day / No-show: Non-refundable",
                 policy_kr: "취소 및 환불 규정 안내:\n• 모임 일주일 전: 100% 전액 환불\n• 모임 3일 전: 50% 환불\n• 모임 1일 전: 30% 환불\n• 모임 당일 취소 및 노쇼: 환불 불가"
@@ -227,34 +135,8 @@
                 }
             },
             dateBookings: {
-                "2026-07-17": { 
-                    kr_seats_left: 10, 
-                    foreigner_seats_left: 10,
-                    title_en: "Somaek Culture Exchange Night",
-                    title_kr: "금요 소맥 살롱 파티",
-                    slogan_en: "FRIDAY SALON (금요 살롱)",
-                    slogan_kr: "금요일 밤의 소맥 미팅 파티",
-                    type_en: "Somaek Board Game & Culture Exchange",
-                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
-                    where: "Central (센트럴)",
-                    fee: "250 HKD",
-                    inclusions: "Somaek Board & Chimeg Packs",
-                    when: "6:00 PM - 8:00 PM (2 hrs)"
-                },
-                "2026-07-18": { 
-                    kr_seats_left: 7, 
-                    foreigner_seats_left: 10,
-                    title_en: "Chimaek Language Exchange Party",
-                    title_kr: "토요 치맥 살롱 축제",
-                    slogan_en: "SATURDAY SALON (토요 살롱)",
-                    slogan_kr: "토요일 밤의 치맥 미팅 파티",
-                    type_en: "K-Pop Talk & Crispy Chimaek Party",
-                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
-                    where: "Tsim Sha Tsui (침사추이)",
-                    fee: "250 HKD",
-                    inclusions: "Chimaek Board & K-Pub Platter",
-                    when: "4:45 PM - 6:45 PM (2 hrs)"
-                },
+                "2026-07-17": { kr_seats_left: 10, foreigner_seats_left: 10, title_en: "Somaek Culture Exchange Night", title_kr: "금요 소맥 살롱 파티", slogan_en: "FRIDAY SALON (금요 살롱)", slogan_kr: "금요일 밤의 소맥 미팅 파티", type_en: "Somaek Board Game & Culture Exchange", type_kr: "소맥 룰렛 보드게임 및 언어교환", where: "Central (센트럴)", fee: "250 HKD", inclusions: "Somaek Board & Chimeg Packs", when: "6:00 PM - 8:00 PM (2 hrs)" },
+                "2026-07-18": { kr_seats_left: 7, foreigner_seats_left: 10, title_en: "Chimaek Language Exchange Party", title_kr: "토요 치맥 살롱 축제", slogan_en: "SATURDAY SALON (토요 살롱)", slogan_kr: "토요일 밤의 치맥 미팅 파티", type_en: "K-Pop Talk & Crispy Chimaek Party", type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티", where: "Tsim Sha Tsui (침사추이)", fee: "250 HKD", inclusions: "Chimaek Board & K-Pub Platter", when: "4:45 PM - 6:45 PM (2 hrs)" },
                 "2026-07-24": { kr_seats_left: 10, foreigner_seats_left: 10 },
                 "2026-07-25": { kr_seats_left: 10, foreigner_seats_left: 10 },
                 "2026-08-14": { kr_seats_left: 8, foreigner_seats_left: 9 },
@@ -263,8 +145,8 @@
                 "2026-08-22": { kr_seats_left: 10, foreigner_seats_left: 10 }
             },
             design: {
-                seating_image: "4.sincere ice-breaker cheer.png",
-                ticket_image: "8. photo session &contact exchange.png"
+                seating_image: "4. png_4.png",
+                ticket_image: "8. png_4.png"
             }
         };
     </script>
@@ -379,7 +261,7 @@
 
                     <!-- Image Slideshow Frame (Click anywhere on image to cycle) -->
                     <div onclick="cycleHeroImageClick()" class="relative overflow-hidden rounded-xl mb-4 aspect-[4/5] bg-gradient-to-tr from-slate-900 via-darkgray to-slate-950 flex items-center justify-center border border-slate-200/10 cursor-pointer">
-                        <img id="dom-hero-slideshow-img" src="1. arrival&check-in.png" alt="Premium escape vibe" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 ease-in-out">
+                        <img id="dom-hero-slideshow-img" src="1. png_4.png" alt="Premium escape vibe" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 ease-in-out">
 
                         <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
@@ -430,7 +312,7 @@
                     </h3>
 
                     <div class="space-y-2.5 max-h-[420px] overflow-y-auto pr-1">
-                        <!-- Step Button 1 -->
+                        <!-- Step Buttons generated dynamically would be better, but keeping static structure for clarity -->
                         <button onclick="jumpToFlowSlide(0)" id="flow-btn-0" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-rose-500 bg-rose-500/10 scale-[1.02]">
                             <span class="w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
                             <div>
@@ -438,7 +320,6 @@
                                 <p class="text-slate-400 text-[11px] mt-0.5">Settle down, write custom Name Tag</p>
                             </div>
                         </button>
-                        <!-- Step Button 2 -->
                         <button onclick="jumpToFlowSlide(1)" id="flow-btn-1" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">2</span>
                             <div>
@@ -446,7 +327,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Favorite K-food & slangs to share</p>
                             </div>
                         </button>
-                        <!-- Step Button 3 -->
                         <button onclick="jumpToFlowSlide(2)" id="flow-btn-2" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">3</span>
                             <div>
@@ -454,7 +334,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Pouring & tapping with spoon for rich foam</p>
                             </div>
                         </button>
-                        <!-- Step Button 4 -->
                         <button onclick="jumpToFlowSlide(3)" id="flow-btn-3" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">4</span>
                             <div>
@@ -462,7 +341,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Friendly welcome toast to dissolve tension</p>
                             </div>
                         </button>
-                        <!-- Step Button 5 -->
                         <button onclick="jumpToFlowSlide(4)" id="flow-btn-4" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">5</span>
                             <div>
@@ -470,7 +348,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Guessing trendy slang card missions</p>
                             </div>
                         </button>
-                        <!-- Step Button 6 -->
                         <button onclick="jumpToFlowSlide(5)" id="flow-btn-5" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">6</span>
                             <div>
@@ -478,7 +355,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Host rings brass bell for clockwise shift</p>
                             </div>
                         </button>
-                        <!-- Step Button 7 -->
                         <button onclick="jumpToFlowSlide(6)" id="flow-btn-6" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">7</span>
                             <div>
@@ -486,7 +362,6 @@
                                 <p class="text-slate-500 text-[11px] mt-0.5">Practical street phrases & local food tips</p>
                             </div>
                         </button>
-                        <!-- Step Button 8 -->
                         <button onclick="jumpToFlowSlide(7)" id="flow-btn-7" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
                             <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">8</span>
                             <div>
@@ -519,7 +394,7 @@
 
                         <!-- Image Slideshow (Clicking photo cycles) -->
                         <div onclick="cycleFlowImageClick()" class="relative overflow-hidden rounded-xl mb-4 aspect-[4/3] bg-slate-950 flex items-center justify-center cursor-pointer border border-slate-100">
-                            <img id="dom-flow-slideshow-img" src="1. arrival&check-in.png" alt="Program flow active photo" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-300 ease-in-out">
+                            <img id="dom-flow-slideshow-img" src="1. png_4.png" alt="Program flow active photo" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-300 ease-in-out">
                             
                             <!-- Flow index label -->
                             <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
@@ -542,7 +417,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -564,7 +438,6 @@
                         <span class="lang-en">What Makes Seoul Junction Truly Different</span>
                         <span class="lang-kr hidden">서울 정션만의 본질적인 차별점</span>
                     </h2>
-
                     <div class="space-y-6">
                         <!-- Point 1 -->
                         <div class="flex items-start gap-4">
@@ -582,7 +455,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Point 2 -->
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 shrink-0 rounded-full bg-neonCoral/15 text-neonCoral flex items-center justify-center font-bold">
@@ -605,7 +477,7 @@
                 <!-- Right: Seating setup layout image with exact mapping -->
                 <div class="lg:col-span-6 relative flex justify-center">
                     <div class="relative w-full max-w-lg aspect-video bg-darkgray border border-slate-800 rounded-3xl overflow-hidden shadow-2xl group zoom-container flex items-center justify-center">
-                        <img id="dom-design-seating-img" src="4.sincere ice-breaker cheer.png" alt="Engineered 2:2 / 2:2:2 seating table layout" class="absolute inset-0 w-full h-full object-cover z-10">
+                        <img id="dom-design-seating-img" src="4. png_4.png" alt="Engineered 2:2 / 2:2:2 seating table layout" class="absolute inset-0 w-full h-full object-cover z-10">
                         <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/20 to-transparent z-15"></div>
                         
                         <div class="absolute bottom-5 left-5 right-5 z-20 flex items-center gap-4">
@@ -676,7 +548,7 @@
 
                     <!-- Ticket Image Container (Clicking image cycles) -->
                     <div onclick="cycleTicketImageClick()" class="w-full h-full relative cursor-pointer overflow-hidden rounded-2xl">
-                        <img id="dom-design-ticket-img" src="8. photo session &contact exchange.png" alt="Seoul Junction Ticket Vibe" class="absolute inset-0 w-full h-full object-cover rounded-2xl z-10 transition-opacity duration-300 ease-in-out">
+                        <img id="dom-design-ticket-img" src="8. png_4.png" alt="Seoul Junction Ticket Vibe" class="absolute inset-0 w-full h-full object-cover rounded-2xl z-10 transition-opacity duration-300 ease-in-out">
                         
                         <!-- Ticket Badge Indicator -->
                         <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
@@ -698,7 +570,6 @@
                             <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-when">Every Friday @ 6:00 PM</span>
                         </div>
                     </div>
-
                     <!-- Pill 2: Venue -->
                     <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
                         <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
@@ -709,7 +580,6 @@
                             <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-where">Central Trendy K-Pub</span>
                         </div>
                     </div>
-
                     <!-- Pill 3: Inclusion -->
                     <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
                         <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
@@ -720,7 +590,6 @@
                             <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-inclusions">Chimeg Pack & Drink</span>
                         </div>
                     </div>
-
                     <!-- Pill 4: Pricing -->
                     <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
                         <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
@@ -1031,7 +900,6 @@
                                 </a>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -1053,7 +921,6 @@
                 <span class="lang-en">We've received your request. To confirm your Golden 4:2:2 seating placement, please process the FPS/PayMe 250 HKD payment via the WhatsApp link sent to you within 2 hours.</span>
                 <span class="lang-kr hidden">예약이 완료되었습니다! 최적의 황금 4:2:2 비율 테이블 매칭을 확정하기 위해, 2시간 이내에 전송되는 안내 메세지를 따라 FPS/PayMe 사전결제를 완료해 주세요.</span>
             </p>
-
             <button onclick="closeModal()" class="w-full bg-[#FF5E3A] hover:bg-[#FF5E3A]/90 text-white font-bold py-3.5 rounded-xl transition-all duration-300 neon-glow cursor-pointer">
                 <span class="lang-en">Got it, Let's Connect!</span>
                 <span class="lang-kr hidden">확인 및 결제 진행</span>
@@ -1068,7 +935,6 @@
             <button onclick="closeCalendarDialog()" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-
             <!-- Calendar Header -->
             <div class="text-center mb-6">
                 <span class="text-neonCoral font-extrabold uppercase tracking-widest text-[10px] block mb-1">Seoul Junction Scheduler</span>
@@ -1077,17 +943,14 @@
                     <span id="dom-dialog-calendar-title">July 2026</span>
                 </h3>
             </div>
-
             <!-- Calendar Day Header Labels -->
             <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
                 <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
             </div>
-
             <!-- Dynamic Days Symmetrical Grid -->
             <div id="modal-calendar-grid" class="grid grid-cols-7 gap-2 text-center text-xs font-extrabold text-slate-400 mb-6">
                 <!-- Injected dynamically by JS calendar engine -->
             </div>
-
             <p class="text-[10px] text-slate-500 text-center leading-normal">
                 Neon glowing dates contain active premium social salon sessions.<br>
                 (네온 색상으로 불이 들어온 날짜를 누르시면 예약 상세가 아래 폼에 적용됩니다.)
@@ -1167,7 +1030,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Scheduler detail forms -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
@@ -1339,7 +1201,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Banner Copy -->
                     <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
                         <h3 class="text-sm font-bold text-warmYellow uppercase tracking-wider"><i class="fa-solid fa-paragraph mr-1.5"></i> Hero Title & Description</h3>
@@ -1362,7 +1223,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Visual & Picture Assets -->
                     <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
                         <h3 class="text-sm font-bold text-warmYellow uppercase tracking-wider"><i class="fa-solid fa-image mr-1.5"></i> Visual Image Mapping</h3>
@@ -1384,7 +1244,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Right Save & Sync Toolbox -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
@@ -1399,7 +1258,6 @@
                                 <i class="fa-solid fa-file-export"></i> Export index.html
                             </button>
                         </div>
-
                         <!-- Security Options -->
                         <div class="bg-midnight/50 p-4 rounded-xl border border-slate-800">
                             <span class="text-slate-400 font-extrabold text-[10px] tracking-wider uppercase block mb-1">Passcode Management</span>
@@ -2270,6 +2128,19 @@
             } else {
                 document.getElementById('admin-auth-error').classList.remove('hidden');
             }
+        }
+
+        function openAdminDashboard() {
+            document.getElementById('admin-dashboard').classList.remove('hidden');
+        }
+        function closeAdminDashboard() {
+            document.getElementById('admin-dashboard').classList.add('hidden');
+        }
+
+        // Helper to simulate saving and "exporting" by logging current state to console for user to grab
+        function exportUpdatedHtml() {
+            console.log("Updated Configuration State:", JSON.stringify(window.seoulJunctionConfig, null, 2));
+            showCustomToast("Updated configuration has been logged to console. In a production environment, this would save to your server/file!");
         }
     </script>
 </body>

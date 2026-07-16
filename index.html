@@ -1,377 +1,79 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seoul Junction | Your Weekend Escape in HK</title>
-    <!-- Tailwind CSS -->
+    <title>Seoul Junction | Your Weekend Escape</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Noto Sans TC -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        midnight: '#0B0F19',
-                        darkgray: '#121824',
-                        neonCoral: '#FF5E3A',
-                        warmYellow: '#FFE330',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
-                        cursive: ['Caveat', 'cursive'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .neon-glow {
-            box-shadow: 0 0 25px rgba(255, 94, 58, 0.35);
-        }
-        .yellow-glow {
-            box-shadow: 0 0 30px rgba(255, 227, 48, 0.25);
-        }
-        /* Custom premium scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0B0F19;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1F2937;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FF5E3A;
-        }
-        /* Smooth scale zoom on hover */
-        .zoom-container img {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .zoom-container:hover img {
-            transform: scale(1.05);
-        }
-        /* Soft pulse animation for visual cues */
-        @keyframes subtlePulse {
-            0%, 100% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.03); }
-        }
-        .animate-subtle-pulse {
-            animation: subtlePulse 3s infinite ease-in-out;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0B0F19; color: white; }
     </style>
 </head>
-<body class="bg-midnight text-slate-100 font-sans overflow-x-hidden antialiased">
-
-    <script>
-        // Symmetrical Two-Event CMS Configuration State with Calendar Mapping & Refund Rules
-        window.seoulJunctionConfig = {
-            metadata: {
-                passcode: "54028803"
-            },
-            hero: {
-                title_en: "Ditch the Routine,\nMeet Global Minds",
-                title_kr: "지루한 주말 고민은 끝,\n힙한 글로벌 인맥을 만드는 법",
-                slogan_en: "DITCH THE ROUTINE, SPARK YOUR WEEKEND",
-                slogan_kr: "일상 탈출, 힙한 주말의 시작",
-                desc_en: "Tired of superficial clubs and awkward meetups? Escape to our premium language & cultural salon. Meet verified local professionals, expats, and Koreans under gorgeous city lights.",
-                desc_kr: "시끄럽고 가벼운 클럽이나 어색한 밋업에 지치셨나요? 이제 매주 금요일과 토요일 저녁, 감성적인 공간에서 신원 확실한 홍콩 글로벌 직장인, 로컬 현지인들과 함께 힙한 에너지를 나눠보세요.",
-                // Interactive Polaroid gallery sequence with customized handwritten captions
-                gallery: [
-                    {
-                        img: "Gemini_Generated_Image_amei8vamei8vamei.png",
-                        cap_en: "\"Your Weekend Escape to Seoul...\" ✨",
-                        cap_kr: "\"오늘 밤, 홍콩 속 특별한 서울을 만나보세요...\" ✨"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_kfwnl5kfwnl5kfwn.png",
-                        cap_en: "\"1. Find your favorite K-food Name Tag!\" 🏷️",
-                        cap_kr: "\"1. 좋아하는 한식과 실전 유행어를 적는 네임택!\" 🏷️"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_kkcmmhkkcmmhkkcm.png",
-                        cap_en: "\"2. Measure the perfect Somaek ratio!\" 🍺",
-                        cap_kr: "\"2. 탕치기로 거품 가득, 소맥 황금비율 완성!\" 🍺"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_gespw1gespw1gesp.png",
-                        cap_en: "\"3. Friendly ice-breaker cheers!\" 🥂",
-                        cap_kr: "\"3. 첫 긴장감이 사그라지는 활기찬 Somaek Toast!\" 🥂"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_m2w3lgm2w3lgm2w3.png",
-                        cap_en: "\"4. Practicing real street slangs!\" 🃏",
-                        cap_kr: "\"4. 킹받네? 한국 유행어 맞추기 초성 게임!\" 🃏"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_iqzpnfiqzpnfiqzp.png",
-                        cap_en: "\"5. Funny situational slang games!\" 🎭",
-                        cap_kr: "\"5. 네이티브 친구와 웃음 빵 터지는 회화 놀이!\" 🎭"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_dy5pqzdy5pqzdy5p.png",
-                        cap_en: "\"6. Learning real Cantonese colloquial phrases!\" 🌐",
-                        cap_kr: "\"6. 현지 친구에게 배우는 리얼 실전 광둥어!\" 🌐"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_fuox31fuox31fuox.png",
-                        cap_en: "\"7. Clang-Clang! Tables active rotation!\" 🔄",
-                        cap_kr: "\"7. 댕-댕-! 벨소리와 함께 활기찬 로테이션 타임!\" 🔄"
-                    },
-                    {
-                        img: "Gemini_Generated_Image_hg5r51hg5r51hg5r.png",
-                        cap_en: "\"8. Group photo & exchange Instagram QR!\" 📸",
-                        cap_kr: "\"8. 어깨동무하고 한 컷, 이별이 아쉬운 자유 네트워킹!\" 📸"
-                    }
-                ]
-            },
-            refund: {
-                policy_en: "Cancellation Policy:\n• 7 Days Before: 100% Full Refund\n• 3 Days Before: 50% Refund\n• 1 Day Before: 30% Refund\n• Same Day / No-show: Non-refundable",
-                policy_kr: "취소 및 환불 규정 안내:\n• 모임 일주일 전: 100% 전액 환불\n• 모임 3일 전: 50% 환불\n• 모임 1일 전: 30% 환불\n• 모임 당일 취소 및 노쇼: 환불 불가"
-            },
-            events: {
-                friday: {
-                    title_en: "Somaek Culture Exchange Night",
-                    title_kr: "금요 소맥 살롱 파티",
-                    slogan_en: "FRIDAY SALON (금요 살롱)",
-                    slogan_kr: "금요일 밤의 소맥 미팅 파티",
-                    type_en: "Somaek Board Game & Culture Exchange",
-                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
-                    when: "6:00 PM - 8:00 PM (2 hrs)",
-                    where: "Central (센트럴)", 
-                    inclusions: "Somaek Board & Chimeg Packs",
-                    fee: "250 HKD"
-                },
-                saturday: {
-                    title_en: "Chimaek Language Exchange Party",
-                    title_kr: "토요 치맥 살롱 축제",
-                    slogan_en: "SATURDAY SALON (토요 살롱)",
-                    slogan_kr: "토요일 밤의 치맥 미팅 파티",
-                    type_en: "K-Pop Talk & Crispy Chimaek Party",
-                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
-                    when: "4:45 PM - 6:45 PM (2 hrs)",
-                    where: "Tsim Sha Tsui (침사추이)", 
-                    inclusions: "Chimaek Board & K-Pub Platter",
-                    fee: "250 HKD"
-                }
-            },
-            dateBookings: {
-                "2026-07-17": { 
-                    kr_seats_left: 10, 
-                    foreigner_seats_left: 10,
-                    title_en: "Somaek Culture Exchange Night",
-                    title_kr: "금요 소맥 살롱 파티",
-                    slogan_en: "FRIDAY SALON (금요 살롱)",
-                    slogan_kr: "금요일 밤의 소맥 미팅 파티",
-                    type_en: "Somaek Board Game & Culture Exchange",
-                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
-                    where: "Central (센트럴)",
-                    fee: "250 HKD",
-                    inclusions: "Somaek Board & Chimeg Packs",
-                    when: "6:00 PM - 8:00 PM (2 hrs)"
-                },
-                "2026-07-18": { 
-                    kr_seats_left: 7, 
-                    foreigner_seats_left: 10,
-                    title_en: "Chimaek Language Exchange Party",
-                    title_kr: "토요 치맥 살롱 축제",
-                    slogan_en: "SATURDAY SALON (토요 살롱)",
-                    slogan_kr: "토요일 밤의 치맥 미팅 파티",
-                    type_en: "K-Pop Talk & Crispy Chimaek Party",
-                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
-                    where: "Tsim Sha Tsui (침사추이)",
-                    fee: "250 HKD",
-                    inclusions: "Chimaek Board & K-Pub Platter",
-                    when: "4:45 PM - 6:45 PM (2 hrs)"
-                },
-                "2026-07-24": { kr_seats_left: 10, foreigner_seats_left: 10 },
-                "2026-07-25": { kr_seats_left: 10, foreigner_seats_left: 10 },
-                "2026-08-14": { kr_seats_left: 8, foreigner_seats_left: 9 },
-                "2026-08-15": { kr_seats_left: 10, foreigner_seats_left: 10 },
-                "2026-08-21": { kr_seats_left: 5, foreigner_seats_left: 6 },
-                "2026-08-22": { kr_seats_left: 10, foreigner_seats_left: 10 }
-            },
-            steps: {
-                step1: {
-                    title_en: "Arrival & Welcome",
-                    title_kr: "웰컴 및 체크인",
-                    desc_en: "Receive your curated clear acrylic name tag featuring your favorite K-food and a slang you want to practice.",
-                    desc_kr: "내가 좋아하는 한식과 배우고 싶은 한국 유행어를 적는 아크릴 맞춤 네임택을 건네받으며 긴장감 넘치게 시작합니다.",
-                    image: "Gemini_Generated_Image_cyxwarcyxwarcyxw.png"
-                },
-                step2: {
-                    title_en: "The Ice-Breaking",
-                    title_kr: "아이스 브레이킹",
-                    desc_en: "Sip your welcome drink, warm up with interactive tables, and break the ice instantly in a cozy group.",
-                    desc_kr: "테이블 위의 미니 웰컴 대화 카드 게임과 시원하게 건배하는 드링크 타임으로 긴장과 어색함을 완벽하게 해소합니다.",
-                    image: "Gemini_Generated_Image_579ihc579ihc579i.png"
-                },
-                step3: {
-                    title_en: "Bilingual Rounds",
-                    title_kr: "투트랙 언어 교환",
-                    desc_en: "Enjoy curated conversation zones. Flip custom mission cards while native speakers guide your flow.",
-                    desc_kr: "한국어 전용 및 외국어 전용 대화 라운드. 원어민 파트너들의 섬세한 배려 속에 유행어를 주고받으며 대화에 녹아듭니다.",
-                    image: "Gemini_Generated_Image_cxn0qtcxn0qtcxn0.png"
-                },
-                step4: {
-                    title_en: "The Active Rotation",
-                    title_kr: "타종과 테이블 회전",
-                    desc_en: "At the sound of the brass bell, rotate clockwise to meet a fresh dynamic group over authentic bites.",
-                    desc_kr: "호스트의 명쾌한 종소리와 함께 시계 방향 회전! 대화 소재 고갈 없이 매 순간 생생한 에너지로 교류를 지속합니다.",
-                    image: "Gemini_Generated_Image_3eejjq3eejjq3eej.png"
-                }
-            },
-            design: {
-                seating_image: "Gemini_Generated_Image_9ymm509ymm509ymm.png",
-                ticket_image: "Gemini_Generated_Image_4rk2rr4rk2rr4rk2.png"
-            }
-        };
-    </script>
-
-    <!-- Floating Navbar -->
-    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl bg-midnight/85 backdrop-blur-md border border-slate-800/80 rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 shadow-xl">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 group">
-            <div class="relative w-8 h-8 flex items-center justify-center">
-                <svg class="w-full h-full text-neonCoral group-hover:text-warmYellow transition-colors duration-300" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 32C8 20.9543 16.9543 12 28 12V12C33.5228 12 38 16.4772 38 22V32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M32 8C32 19.0457 23.0457 28 12 28V28C6.47715 28 2 23.5228 2 18V8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <span class="font-extrabold text-lg tracking-wider text-white">SEOUL <span class="text-neonCoral">JUNCTION</span></span>
-        </a>
-
-        <!-- Controls -->
-        <div class="flex items-center gap-3">
-            <button onclick="toggleLanguage()" class="bg-darkgray border border-slate-700 hover:border-neonCoral text-xs font-bold px-3.5 py-2 rounded-full transition-all duration-300 flex items-center gap-2 text-slate-300 hover:text-white">
-                <i class="fa-solid fa-globe"></i>
-                <span id="lang-indicator">EN</span>
-            </button>
-            <button onclick="openAdminPortal()" class="bg-darkgray border border-slate-700 hover:border-warmYellow text-slate-400 hover:text-warmYellow w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300" title="Admin Portal">
-                <i class="fa-solid fa-lock text-xs"></i>
-            </button>
-            <a href="#rsvp-section" class="bg-neonCoral hover:bg-neonCoral/90 text-white font-bold text-xs md:text-sm px-6 py-2.5 rounded-full transition-all duration-300 neon-glow tracking-wide">
-                <span class="lang-en">RSVP NOW</span>
-                <span class="lang-kr hidden">예약하기</span>
-            </a>
-        </div>
+<body class="pb-16">
+    <!-- Header -->
+    <nav class="max-w-xl mx-auto p-6">
+        <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
+            SEOUL JUNCTION
+        </h1>
+        <p class="text-gray-400 mt-1">Your Friday Escape in Hong Kong 🥂</p>
     </nav>
-
-    <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,94,58,0.06)_0%,transparent_65%)] pointer-events-none"></div>
-
-        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
-            <div class="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-                <!-- Upgraded Slogan Badge -->
-                <span class="bg-neonCoral/10 text-neonCoral text-xs md:text-sm font-extrabold tracking-widest px-4 py-1.5 rounded-full mb-6 inline-flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-neonCoral animate-ping"></span>
-                    <span class="lang-en" id="dom-slogan-en">DITCH THE ROUTINE, SPARK YOUR WEEKEND</span>
-                    <span class="lang-kr hidden" id="dom-slogan-kr">일상 탈출, 힙한 주말의 시작</span>
-                </span>
-                
-                <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-none mb-6">
-                    <span class="lang-en" id="dom-hero-title-en">Ditch the Routine,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCoral to-warmYellow">Meet Global Minds</span></span>
-                    <span class="lang-kr hidden" id="dom-hero-title-kr">지루한 주말 고민은 끝,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCoral to-warmYellow">힙한 글로벌 인맥</span>을 만드는 법</span>
-                </h1>
-
-                <p class="text-slate-400 text-base md:text-lg max-w-lg mb-8 leading-relaxed">
-                    <span class="lang-en" id="dom-hero-desc-en">Tired of superficial clubs and awkward meetups? Escape to our premium language & cultural salon. Meet verified local professionals, expats, and Koreans under gorgeous city lights.</span>
-                    <span class="lang-kr hidden" id="dom-hero-desc-kr">시끄럽고 가벼운 클럽이나 어색한 밋업에 지치셨나요? 이제 매주 금요일과 토요일 저녁, 감성적인 공간에서 신원 확실한 홍콩 글로벌 직장인, 로컬 현지인들과 함께 힙한 에너지를 나눠보세요.</span>
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
-                    <a href="#rsvp-section" class="bg-neonCoral hover:bg-neonCoral/90 text-white font-extrabold text-base px-8 py-4 rounded-full transition-all duration-300 neon-glow text-center flex items-center justify-center gap-2">
-                        <span class="lang-en">Book Your Weekend Seat</span>
-                        <span class="lang-kr hidden">주말 좌석 선점</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Side: Polaroid frame with interactive click cyclical gallery slider -->
-            <div class="lg:col-span-6 relative flex justify-center">
-                <div class="bg-white p-4 pb-6 rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500 max-w-sm w-full border border-slate-200/90 relative group">
-                    <div class="absolute top-1/2 left-2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button type="button" onclick="navigateHeroGallery(-1)" class="w-9 h-9 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
-                            <i class="fa-solid fa-chevron-left text-xs"></i>
-                        </button>
-                    </div>
-                    <div class="absolute top-1/2 right-2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button type="button" onclick="navigateHeroGallery(1)" class="w-9 h-9 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
-                            <i class="fa-solid fa-chevron-right text-xs"></i>
-                        </button>
-                    </div>
-
-                    <div onclick="cycleHeroImageClick()" class="relative overflow-hidden rounded-xl mb-4 aspect-[4/5] bg-gradient-to-tr from-slate-900 via-darkgray to-slate-950 flex items-center justify-center border border-slate-200/10 cursor-pointer">
-                        <img id="dom-hero-slideshow-img" src="Gemini_Generated_Image_amei8vamei8vamei.png" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 ease-in-out">
-                        <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-                            <span id="dom-hero-slideshow-indicator">Timeline (0/9)</span>
-                        </div>
-                    </div>
-
-                    <div class="text-slate-900 font-cursive font-bold text-2xl text-center tracking-wide leading-tight px-2 min-h-[3rem] flex items-center justify-center" id="dom-hero-slideshow-caption">
-                        "Your Friday Escape to Seoul..." ✨
-                    </div>
-
-                    <div class="flex items-center justify-center gap-1.5 mt-3 border-t border-slate-100 pt-3">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[#FF5E3A] transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(0)" id="dot-hero-0"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(1)" id="dot-hero-1"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(2)" id="dot-hero-2"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(3)" id="dot-hero-3"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(4)" id="dot-hero-4"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(5)" id="dot-hero-5"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(6)" id="dot-hero-6"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(7)" id="dot-hero-7"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-200 transition-all duration-300 cursor-pointer" onclick="jumpToHeroSlide(8)" id="dot-hero-8"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- (The rest of the code remains the same as previously established: Timeline, Why Different, RSVP Form, etc.) -->
-    <!-- ... (Previous sections: Program Flow, Why Different, Invitation Pass, Reservation Form remain unchanged) ... -->
-
-    <script>
-        /* [Core Logic and CMS Handlers] */
-        let currentLang = 'EN';
-        let activeEventKey = 'friday'; 
-        const baseCurrentDate = new Date(2026, 6, 13);
-        let calendarSelectedYear = 2026;
-        let calendarSelectedMonth = 6;
-        let heroActiveSlideIndex = 0;
-
-        window.onload = function() {
-            renderDynamicContent();
-            renderCalendarDays(calendarSelectedYear, calendarSelectedMonth);
-            populateSchedulerDateDropdown();
-            selectCalendarDate("2026-07-17");
-            jumpToHeroSlide(0);
-        };
-
-        function renderDynamicContent() {
-            const data = window.seoulJunctionConfig;
-            // Update Slogan Badge
-            document.getElementById('dom-slogan-en').textContent = data.hero.slogan_en;
-            document.getElementById('dom-slogan-kr').textContent = data.hero.slogan_kr;
+    <main class="max-w-xl mx-auto px-4 space-y-12">
+        
+        <!-- Timeline Section -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-bold border-l-4 border-orange-500 pl-3">Experience Timeline</h2>
             
-            document.getElementById('dom-hero-title-en').innerHTML = data.hero.title_en.replace(/\n/g, '<br>');
-            document.getElementById('dom-hero-title-kr').innerHTML = data.hero.title_kr.replace(/\n/g, '<br>');
-            document.getElementById('dom-hero-desc-en').textContent = data.hero.desc_en;
-            document.getElementById('dom-hero-desc-kr').textContent = data.hero.desc_kr;
-        }
-        
-        // ... (Include previous logic functions: toggleLanguage, cycleHeroImageClick, jumpToHeroSlide, renderCalendarDays, selectCalendarDate, etc.)
-        
-        // (Function stubs omitted for brevity, but all previous functional logic persists)
-    </script>
+            <div class="grid gap-6">
+                <!-- 1 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="1.png" alt="Arrival" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">1. Arrival & Check-in</h3></div>
+                </div>
+                <!-- 2 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="2.png" alt="Settle down" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">2. Settle Down & Name Tag</h3></div>
+                </div>
+                <!-- 3 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="3.png" alt="Somaeck" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">3. Somaeck Ratio Brewing</h3></div>
+                </div>
+                <!-- 4 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="4.png" alt="Ice-breaker" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">4. Sincere Ice-Breaker Cheer</h3></div>
+                </div>
+                <!-- 5 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="5.png" alt="Korean Only" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">5. Speak Only in Korean</h3></div>
+                </div>
+                <!-- 6 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="6.png" alt="Bell Ring" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">6. Clang-Clang Bell Ring</h3></div>
+                </div>
+                <!-- 7 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="7.png" alt="Exchange" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">7. Real Cantonese & English Exchange</h3></div>
+                </div>
+                <!-- 8 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="8.png" alt="Photo" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">8. Photo Session & Contact Exchange</h3></div>
+                </div>
+            </div>
+        </section>
+        <!-- Booking CTA -->
+        <div class="fixed bottom-0 left-0 w-full p-4 bg-gray-950 border-t border-gray-800">
+            <button onclick="window.location.href='https://wa.me/85254028803'" 
+                    class="w-full py-4 bg-gradient-to-r from-orange-500 to-pink-600 rounded-xl font-black text-lg shadow-lg">
+                Book Your Friday Seat →
+            </button>
+        </div>
+    </main>
 </body>
 </html>

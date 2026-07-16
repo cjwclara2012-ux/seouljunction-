@@ -69,7 +69,7 @@
 <body class="bg-midnight text-slate-100 font-sans overflow-x-hidden antialiased">
 
     <script>
-        /* STREAMING_CHUNK: Setting up fully editable, multi-event dual structure... */
+        /* STREAMING_CHUNK: Structuring calendar-based multi-event system state... */
         // Symmetrical Two-Event CMS Configuration State with Calendar Mapping
         window.seoulJunctionConfig = {
             metadata: {
@@ -85,15 +85,13 @@
             events: {
                 friday: {
                     title_en: "Somaek Culture Exchange Night",
-                    title_kr: "금요 소맥 살롱 파티",
+                    title_kr: "Friday Somaek (금요 소맥)",
                     slogan_en: "FRIDAY SALON (금요 살롱)",
                     slogan_kr: "금요일 밤의 소맥 미팅 파티",
                     date_string: "2026-07-17",
                     day_name: "Friday",
-                    type_en: "Somaek Board Game & Culture Exchange",
-                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
                     when: "Friday Night 6:00 PM - 8:00 PM (2 hrs)",
-                    where: "Central (센트럴)", // Supported: Central (센트럴), Causeway Bay (코즈웨이), Wan Chai (완차이), Tsim Sha Tsui (침사추이)
+                    where: "Central (센트럴)", // Central (센트럴), Causeway Bay (코즈웨이), Wan Chai (완차이), Tsim Sha Tsui (침사추이)
                     inclusions: "Somaek Board & Chimeg Packs",
                     fee: "250 HKD",
                     kr_seats_left: 10,
@@ -102,15 +100,13 @@
                 },
                 saturday: {
                     title_en: "Chimaek Language Exchange Party",
-                    title_kr: "토요 치맥 살롱 축제",
+                    title_kr: "Saturday Chimaek (토요 치맥)",
                     slogan_en: "SATURDAY SALON (토요 살롱)",
                     slogan_kr: "토요일 밤의 치맥 미팅 파티",
                     date_string: "2026-07-18",
                     day_name: "Saturday",
-                    type_en: "K-Pop Talk & Crispy Chimaek Party",
-                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
                     when: "Every Saturday Evening 4:45-6:45 (2 hrs)",
-                    where: "Tsim Sha Tsui (침사추이)", // Supported: Central (센트럴), Causeway Bay (코즈웨이), Wan Chai (완차이), Tsim Sha Tsui (침사추이)
+                    where: "Tsim Sha Tsui (침사추이)", // Central (센트럴), Causeway Bay (코즈웨이), Wan Chai (완차이), Tsim Sha Tsui (침사추이)
                     inclusions: "Chimaek Board & K-Pub Platter",
                     fee: "250 HKD",
                     kr_seats_left: 7,
@@ -617,7 +613,7 @@
                         </div>
                         <div class="flex flex-col">
                             <span class="text-[9px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">INCLUSIONS</span>
-                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-inclusions">Chimeg Pack & Drink</span>
+                            <span class="text-xs font-black tracking-tight text-white" id="dom-event-inclusions">Chimeg Pack & Drink</span>
                         </div>
                     </div>
 
@@ -627,8 +623,8 @@
                             <i class="fa-solid fa-ticket text-lg"></i>
                         </div>
                         <div class="flex flex-col">
-                            <span class="text-[10px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">ENTRY FEE</span>
-                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-fee">250 HKD (Pre-booked)</span>
+                            <span class="text-[9px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">ENTRY FEE</span>
+                            <span class="text-xs font-black tracking-tight text-white" id="dom-event-fee">250 HKD (Pre-booked)</span>
                         </div>
                     </div>
                 </div>
@@ -636,63 +632,103 @@
         </div>
     </section>
 
+    <!-- STREAMING_CHUNK: Injecting Interactive Calendar Widget and selected date details card... -->
     <!-- Reservation Form Section (Two-Column Layout Matching bandicam screenshots) -->
     <section id="rsvp-section" class="py-24 relative overflow-hidden bg-slate-900/40">
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Left Side: Select Event & Live Availability Dashboard -->
+                <!-- Left Side: Interactive Calendar & Live Availability Dashboard -->
                 <div class="lg:col-span-5 space-y-6">
-                    <!-- Select Event Card (Built-in Premium Interactive Calendar) -->
+                    <!-- Calendar Event Selector (Dynamic Calendar View) -->
                     <div class="bg-darkgray border border-slate-800 rounded-3xl p-6 shadow-xl">
                         <div class="flex items-center justify-between mb-4 border-b border-slate-800/80 pb-3">
                             <div class="flex items-center gap-2">
-                                <i class="fa-regular fa-calendar-check text-rose-500 text-lg"></i>
-                                <h3 class="text-white font-extrabold text-sm tracking-wider uppercase">Select Event (모임 선택)</h3>
+                                <i class="fa-regular fa-calendar-days text-rose-500 text-lg"></i>
+                                <h3 class="text-white font-extrabold text-sm tracking-wider uppercase">Select Date (달력 모임 선택)</h3>
                             </div>
-                            <!-- Calendar Popup Modal Trigger (Matching 15-59-45-263.jpg request) -->
-                            <button type="button" onclick="openCalendarDialog()" class="bg-rose-500 hover:bg-rose-600 text-white font-black text-xs px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-md">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <span class="lang-en">Open Calendar</span>
-                                <span class="lang-kr hidden">달력 팝업 열기</span>
-                            </button>
-                        </div>
-                        
-                        <!-- Event Card: Friday Somaek -->
-                        <div onclick="switchActiveEvent('friday')" id="event-card-friday" class="border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300 mb-4">
-                            <div class="absolute top-4 right-4 text-right">
-                                <span class="text-rose-500 font-black text-sm block">HKD 250</span>
-                                <span class="text-slate-500 text-[10px] block font-bold">About 43,000원</span>
-                            </div>
-                            
-                            <span class="bg-rose-500/10 text-rose-500 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Friday Salon (금요 살롱)</span>
-                            <h4 class="text-white font-black text-base mb-1" id="dom-friday-card-title">Somaek Culture Exchange Night</h4>
-                            <p class="text-slate-400 text-xs mb-3" id="dom-friday-card-sub">Central (센트럴)</p>
-                            <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5"><i class="fa-regular fa-clock text-rose-500"></i> <span id="dom-friday-card-when">Friday Night 6:00 PM - 8:00 PM (2 hrs)</span></p>
-                            
-                            <!-- Total Counters -->
-                            <div class="border-t border-slate-800/80 pt-3 flex justify-between text-xs font-bold text-slate-400">
-                                <span>Total Seats Left (남은 전체 공석):</span>
-                                <span class="text-rose-500"><span id="dom-friday-total-seats">20</span> Seats Left / 20 Total</span>
-                            </div>
+                            <span class="text-xs font-black text-warmYellow bg-warmYellow/10 px-3 py-1 rounded-full uppercase tracking-wider">July 2026</span>
                         </div>
 
-                        <!-- Event Card: Saturday Chimaek -->
-                        <div onclick="switchActiveEvent('saturday')" id="event-card-saturday" class="border border-slate-800 bg-midnight/30 rounded-2xl p-5 relative cursor-pointer transition-all duration-300">
+                        <!-- 7x5 Day Grid Header -->
+                        <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
+                            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                        </div>
+
+                        <!-- Interactive Mini-Calendar Days for July 2026 (July 1st is Wednesday) -->
+                        <div class="grid grid-cols-7 gap-1.5 text-center text-xs font-extrabold text-slate-400">
+                            <!-- Week 1 Empty spacers (Sun to Tue) -->
+                            <span></span><span></span><span></span>
+                            <!-- July Days -->
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>1</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>2</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>3</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>4</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>5</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>6</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>7</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>8</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>9</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>10</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>11</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>12</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>13</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>14</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>15</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>16</button>
+
+                            <!-- Highlighted Friday July 17 (Event Active) -->
+                            <button type="button" onclick="selectCalendarDate('friday')" id="cal-day-friday" class="py-2 rounded-xl border-2 border-rose-500 bg-rose-500/10 text-white font-black hover:scale-105 transition-transform duration-300 relative shadow-md shadow-rose-500/10 flex items-center justify-center">
+                                17
+                                <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping"></span>
+                            </button>
+
+                            <!-- Highlighted Saturday July 18 (Event Active) -->
+                            <button type="button" onclick="selectCalendarDate('saturday')" id="cal-day-saturday" class="py-2 rounded-xl border border-slate-700 bg-midnight hover:border-teal-400 text-teal-400 font-black hover:scale-105 transition-transform duration-300 relative flex items-center justify-center">
+                                18
+                                <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
+                            </button>
+
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>19</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>20</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>21</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>22</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>23</button>
+                            <!-- Subsequent week Friday July 24 Somaek -->
+                            <button type="button" onclick="selectCalendarDate('friday')" class="py-2 rounded-xl border border-slate-700 bg-midnight text-rose-400 hover:border-rose-500 cursor-pointer font-black flex items-center justify-center">24</button>
+                            <!-- Subsequent week Saturday July 25 Chimaek -->
+                            <button type="button" onclick="selectCalendarDate('saturday')" class="py-2 rounded-xl border border-slate-700 bg-midnight text-teal-400 hover:border-teal-500 cursor-pointer font-black flex items-center justify-center">25</button>
+                            
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>26</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>27</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>28</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>29</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>30</button>
+                            <button type="button" class="py-2 rounded-xl bg-midnight/20 hover:bg-midnight text-slate-600 cursor-not-allowed" disabled>31</button>
+                        </div>
+
+                        <!-- Active Selected Event Display Card (Symmetrically matches bandicam 2026-07-13 15-59-45-263.jpg) -->
+                        <div id="dynamic-calendar-details-card" class="border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative transition-all duration-500 mt-6 animate-subtle-pulse">
+                            <!-- Currency Display -->
                             <div class="absolute top-4 right-4 text-right">
-                                <span class="text-rose-500 font-black text-sm block">HKD 250</span>
+                                <span class="text-rose-500 font-black text-sm block" id="dom-dyn-card-fee">HKD 250</span>
                                 <span class="text-slate-500 text-[10px] block font-bold">About 43,000원</span>
                             </div>
+
+                            <span class="bg-rose-500/10 text-rose-500 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block" id="dom-dyn-card-slogan">FRIDAY SALON (금요 살롱)</span>
+                            <h4 class="text-white font-black text-base mb-1" id="dom-dyn-card-title">Somaek Culture Exchange Night</h4>
+                            <p class="text-slate-400 text-xs mb-3" id="dom-dyn-card-sub">금요일 밤의 소맥 미팅 파티</p>
                             
-                            <span class="bg-rose-500/10 text-rose-500 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Saturday Salon (토요 살롱)</span>
-                            <h4 class="text-white font-black text-base mb-1" id="dom-saturday-card-title">Chimaek Language Exchange Party</h4>
-                            <p class="text-slate-400 text-xs mb-3" id="dom-saturday-card-sub">Tsim Sha Tsui (침사추이)</p>
-                            <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5"><i class="fa-regular fa-clock text-rose-500"></i> <span id="dom-saturday-card-when">Every Saturday Evening 4:45-6:45</span></p>
-                            
-                            <!-- Total Counters -->
+                            <!-- Real Time / Day Variable -->
+                            <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5">
+                                <i class="fa-regular fa-clock text-rose-500"></i>
+                                <span id="dom-dyn-card-when">Friday Night 6:00 PM - 8:00 PM (2 hrs)</span>
+                            </p>
+
+                            <!-- Total Counters Footer -->
                             <div class="border-t border-slate-800/80 pt-3 flex justify-between text-xs font-bold text-slate-400">
                                 <span>Total Seats Left (남은 전체 공석):</span>
-                                <span class="text-rose-500"><span id="dom-saturday-total-seats">17</span> Seats Left / 20 Total</span>
+                                <span class="text-rose-500"><span id="dom-dyn-total-seats">20</span> Seats Left / 20 Total</span>
                             </div>
                         </div>
                     </div>
@@ -876,88 +912,6 @@
         </div>
     </div>
 
-    <!-- STREAMING_CHUNK: Coding responsive interactive calendar popup modal... -->
-    <!-- Interactive Social Calendar Popup Modal -->
-    <div id="calendar-dialog-modal" class="fixed inset-0 bg-midnight/96 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-darkgray border border-slate-800 p-6 rounded-[32px] max-w-md w-full relative shadow-2xl">
-            <!-- Close Modal -->
-            <button onclick="closeCalendarDialog()" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-
-            <!-- Calendar Header -->
-            <div class="text-center mb-6">
-                <span class="text-neonCoral font-extrabold uppercase tracking-widest text-[10px] block mb-1">Seoul Junction Scheduler</span>
-                <h3 class="text-white font-black text-xl flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calendar-days text-warmYellow"></i>
-                    <span>July 2026</span>
-                </h3>
-            </div>
-
-            <!-- Calendar Day Header Labels -->
-            <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
-                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
-            </div>
-
-            <!-- 7x5 Days Symmetrical Grid -->
-            <div class="grid grid-cols-7 gap-2 text-center text-xs font-extrabold text-slate-400 mb-6">
-                <!-- Spacers -->
-                <span></span><span></span><span></span>
-                <!-- July Days -->
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">1</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">2</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">3</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">4</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">5</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">6</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">7</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">8</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">9</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">10</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">11</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">12</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">13</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">14</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">15</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">16</span>
-
-                <!-- Highlighted Friday July 17 (Editable via CMS date) -->
-                <button type="button" onclick="selectDateFromCalendar('friday')" class="py-2.5 rounded-xl border-2 border-rose-500 bg-rose-500/20 text-white font-black hover:scale-110 transition-transform duration-300 relative shadow-md shadow-rose-500/20 flex items-center justify-center">
-                    17
-                    <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping"></span>
-                </button>
-
-                <!-- Highlighted Saturday July 18 (Editable via CMS date) -->
-                <button type="button" onclick="selectDateFromCalendar('saturday')" class="py-2.5 rounded-xl border-2 border-teal-400 bg-teal-400/20 text-white font-black hover:scale-110 transition-transform duration-300 relative shadow-md shadow-teal-500/20 flex items-center justify-center">
-                    18
-                    <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-teal-400 rounded-full"></span>
-                </button>
-
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">19</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">20</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">21</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">22</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">23</span>
-                
-                <!-- Symmetrical subsequent active dates -->
-                <button type="button" onclick="selectDateFromCalendar('friday')" class="py-2.5 rounded-xl border border-rose-500/40 bg-rose-500/5 text-rose-300 hover:border-rose-500 font-bold flex items-center justify-center">24</button>
-                <button type="button" onclick="selectDateFromCalendar('saturday')" class="py-2.5 rounded-xl border border-teal-500/40 bg-teal-500/5 text-teal-300 hover:border-teal-500 font-bold flex items-center justify-center">25</button>
-                
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">26</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">27</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">28</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">29</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">30</span>
-                <span class="py-2.5 rounded-xl bg-slate-900/10 text-slate-700">31</span>
-            </div>
-
-            <p class="text-[10px] text-slate-500 text-center leading-normal">
-                Neon glowing dates contain active premium social salon sessions.<br>
-                (네온 색상으로 불이 들어온 날짜를 누르시면 예약 상세가 아래 폼에 적용됩니다.)
-            </p>
-        </div>
-    </div>
-
     <!-- Admin Portal Passcode Modal -->
     <div id="admin-auth-modal" class="fixed inset-0 bg-midnight/95 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-darkgray border border-slate-800 p-8 rounded-[32px] max-w-sm w-full text-center shadow-2xl">
@@ -979,7 +933,6 @@
         </div>
     </div>
 
-    <!-- STREAMING_CHUNK: Injecting dynamic admin control panel dashboard... -->
     <!-- Admin CMS Dashboard Modal -->
     <div id="admin-dashboard" class="fixed inset-0 bg-midnight/98 overflow-y-auto z-50 hidden">
         <div class="max-w-4xl mx-auto px-4 py-12">
@@ -1014,26 +967,6 @@
                             <div>
                                 <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (Korean)</label>
                                 <input type="text" id="edit-event-friday-title-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (English)</label>
-                                <input type="text" id="edit-event-friday-slogan-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (Korean)</label>
-                                <input type="text" id="edit-event-friday-slogan-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (English)</label>
-                                <input type="text" id="edit-event-friday-type-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (Korean)</label>
-                                <input type="text" id="edit-event-friday-type-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Date String (YYYY-MM-DD)</label>
-                                <input type="text" id="edit-event-friday-date" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
                             </div>
                             <div>
                                 <label class="block text-slate-400 text-xs mb-1.5 font-bold">When (Day & Time)</label>
@@ -1078,26 +1011,6 @@
                             <div>
                                 <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (Korean)</label>
                                 <input type="text" id="edit-event-saturday-title-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (English)</label>
-                                <input type="text" id="edit-event-saturday-slogan-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (Korean)</label>
-                                <input type="text" id="edit-event-saturday-slogan-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (English)</label>
-                                <input type="text" id="edit-event-saturday-type-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (Korean)</label>
-                                <input type="text" id="edit-event-saturday-type-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Date String (YYYY-MM-DD)</label>
-                                <input type="text" id="edit-event-saturday-date" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
                             </div>
                             <div>
                                 <label class="block text-slate-400 text-xs mb-1.5 font-bold">When (Day & Time)</label>
@@ -1243,7 +1156,7 @@
         // Initialize values from config schema
         window.onload = function() {
             renderDynamicContent();
-            selectDateFromCalendar('friday'); // Default to Friday Somaek
+            selectCalendarDate('friday'); // Default to Friday Somaek
         };
 
         // Render dynamic CMS values into target DOM elements
@@ -1323,31 +1236,26 @@
             }
         }
 
-        /* STREAMING_CHUNK: Managing calendar popup modlets... */
-        // Open the beautiful calendar dialog box
-        function openCalendarDialog() {
-            const modal = document.getElementById('calendar-dialog-modal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-
-        function closeCalendarDialog() {
-            const modal = document.getElementById('calendar-dialog-modal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        // Action when date is selected from calendar
-        function selectDateFromCalendar(key) {
+        /* STREAMING_CHUNK: Managing calendar clicks and view dynamic synchronization... */
+        // Handle calendar clicks dynamically mapping correct events
+        function selectCalendarDate(key) {
             activeEventKey = key;
-            closeCalendarDialog();
-            switchActiveEvent(key);
-        }
+            const friCalBtn = document.getElementById('cal-day-friday');
+            const satCalBtn = document.getElementById('cal-day-saturday');
 
-        // Switch active selected event (Friday or Saturday)
-        function switchActiveEvent(key) {
-            activeEventKey = key;
+            if (key === 'friday') {
+                // Focus Friday
+                friCalBtn.className = "py-2 rounded-xl border-2 border-rose-500 bg-rose-500/20 text-white font-black hover:scale-105 transition-transform duration-300 relative shadow-md shadow-rose-500/30 flex items-center justify-center";
+                satCalBtn.className = "py-2 rounded-xl border border-slate-700 bg-midnight hover:border-teal-400 text-teal-400 font-black hover:scale-105 transition-transform duration-300 relative flex items-center justify-center";
+            } else {
+                // Focus Saturday
+                friCalBtn.className = "py-2 rounded-xl border border-rose-500/40 bg-rose-500/5 text-rose-300 font-black hover:scale-105 transition-transform duration-300 relative flex items-center justify-center";
+                satCalBtn.className = "py-2 rounded-xl border-2 border-teal-400 bg-teal-400/20 text-white font-black hover:scale-105 transition-transform duration-300 relative shadow-md shadow-teal-500/30 flex items-center justify-center";
+            }
+
+            // Sync card view styling on the left column
             const fridayCard = document.getElementById('event-card-friday');
             const saturdayCard = document.getElementById('event-card-saturday');
-
             if (key === 'friday') {
                 fridayCard.className = "border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300 mb-4";
                 saturdayCard.className = "border border-slate-800 bg-midnight/30 rounded-2xl p-5 relative cursor-pointer transition-all duration-300";
@@ -1356,8 +1264,13 @@
                 saturdayCard.className = "border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300";
             }
 
-            // Sync with current Event Card properties
+            // Sync availability panels
             updateAvailabilityPanel();
+        }
+
+        // Switch active selected event (Friday or Saturday)
+        function switchActiveEvent(key) {
+            selectCalendarDate(key);
         }
 
         // Update active availability counts, form labels, and ticket pass
@@ -1384,13 +1297,23 @@
             document.getElementById('dom-event-inclusions').textContent = activeEvent.inclusions;
             document.getElementById('dom-event-fee').textContent = activeEvent.fee;
 
-            // Render select event card sub-labels with their respective venues
-            document.getElementById('dom-friday-card-sub').textContent = data.events.friday.where;
-            document.getElementById('dom-saturday-card-sub').textContent = data.events.saturday.where;
-            document.getElementById('dom-friday-card-when').textContent = data.events.friday.when;
-            document.getElementById('dom-saturday-card-when').textContent = data.events.saturday.when;
-            document.getElementById('dom-friday-card-title').textContent = data.events.friday.title_en;
-            document.getElementById('dom-saturday-card-title').textContent = data.events.saturday.title_en;
+            // Render Active Calendar Display Card info dynamically (Matches bandicam 2026-07-13 15-59-45-263.jpg style)
+            document.getElementById('dom-dyn-card-title').textContent = activeEvent.title_en;
+            document.getElementById('dom-dyn-card-sub').textContent = currentLang === 'EN' ? activeEvent.title_en : activeEvent.title_kr;
+            document.getElementById('dom-dyn-card-slogan').textContent = currentLang === 'EN' ? activeEvent.slogan_en : activeEvent.slogan_kr;
+            document.getElementById('dom-dyn-card-when').textContent = `${activeEvent.day_name} Night • ${activeEvent.when}`;
+            document.getElementById('dom-dyn-card-fee').textContent = activeEvent.fee;
+            document.getElementById('dom-dyn-total-seats').textContent = totalLeft;
+
+            // Styling adjustments for dynamic card
+            const detailsCard = document.getElementById('dynamic-calendar-details-card');
+            if (activeEventKey === 'friday') {
+                detailsCard.style.borderColor = "#FF5E3A";
+                detailsCard.style.backgroundColor = "rgba(255, 94, 58, 0.05)";
+            } else {
+                detailsCard.style.borderColor = "#2DD4BF";
+                detailsCard.style.backgroundColor = "rgba(45, 212, 191, 0.05)";
+            }
         }
 
         // Handle nationality selection
@@ -1544,11 +1467,6 @@
             
             document.getElementById('edit-event-friday-title-en').value = data.events.friday.title_en;
             document.getElementById('edit-event-friday-title-kr').value = data.events.friday.title_kr;
-            document.getElementById('edit-event-friday-slogan-en').value = data.events.friday.slogan_en;
-            document.getElementById('edit-event-friday-slogan-kr').value = data.events.friday.slogan_kr;
-            document.getElementById('edit-event-friday-type-en').value = data.events.friday.type_en;
-            document.getElementById('edit-event-friday-type-kr').value = data.events.friday.type_kr;
-            document.getElementById('edit-event-friday-date').value = data.events.friday.date_string;
             document.getElementById('edit-event-friday-when').value = data.events.friday.when;
             document.getElementById('edit-event-friday-where').value = data.events.friday.where;
             document.getElementById('edit-event-friday-inclusions').value = data.events.friday.inclusions;
@@ -1558,11 +1476,6 @@
 
             document.getElementById('edit-event-saturday-title-en').value = data.events.saturday.title_en;
             document.getElementById('edit-event-saturday-title-kr').value = data.events.saturday.title_kr;
-            document.getElementById('edit-event-saturday-slogan-en').value = data.events.saturday.slogan_en;
-            document.getElementById('edit-event-saturday-slogan-kr').value = data.events.saturday.slogan_kr;
-            document.getElementById('edit-event-saturday-type-en').value = data.events.saturday.type_en;
-            document.getElementById('edit-event-saturday-type-kr').value = data.events.saturday.type_kr;
-            document.getElementById('edit-event-saturday-date').value = data.events.saturday.date_string;
             document.getElementById('edit-event-saturday-when').value = data.events.saturday.when;
             document.getElementById('edit-event-saturday-where').value = data.events.saturday.where;
             document.getElementById('edit-event-saturday-inclusions').value = data.events.saturday.inclusions;
@@ -1610,11 +1523,9 @@
                     friday: {
                         title_en: document.getElementById('edit-event-friday-title-en').value,
                         title_kr: document.getElementById('edit-event-friday-title-kr').value,
-                        slogan_en: document.getElementById('edit-event-friday-slogan-en').value,
-                        slogan_kr: document.getElementById('edit-event-friday-slogan-kr').value,
-                        type_en: document.getElementById('edit-event-friday-type-en').value,
-                        type_kr: document.getElementById('edit-event-friday-type-kr').value,
-                        date_string: document.getElementById('edit-event-friday-date').value,
+                        slogan_en: "FRIDAY SALON (금요 살롱)",
+                        slogan_kr: "금요일 밤의 소맥 미팅 파티",
+                        date_string: "2026-07-17",
                         day_name: "Friday",
                         when: document.getElementById('edit-event-friday-when').value,
                         where: document.getElementById('edit-event-friday-where').value,
@@ -1627,11 +1538,9 @@
                     saturday: {
                         title_en: document.getElementById('edit-event-saturday-title-en').value,
                         title_kr: document.getElementById('edit-event-saturday-title-kr').value,
-                        slogan_en: document.getElementById('edit-event-saturday-slogan-en').value,
-                        slogan_kr: document.getElementById('edit-event-saturday-slogan-kr').value,
-                        type_en: document.getElementById('edit-event-saturday-type-en').value,
-                        type_kr: document.getElementById('edit-event-saturday-type-kr').value,
-                        date_string: document.getElementById('edit-event-saturday-date').value,
+                        slogan_en: "SATURDAY SALON (토요 살롱)",
+                        slogan_kr: "토요일 밤의 치맥 미팅 파티",
+                        date_string: "2026-07-18",
                         day_name: "Saturday",
                         when: document.getElementById('edit-event-saturday-when').value,
                         where: document.getElementById('edit-event-saturday-where').value,

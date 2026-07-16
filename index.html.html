@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Junction | Your Weekend Escape in HK</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter, Noto Sans TC, and Handwriting Caveat -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0B0F19',
+                        darkgray: '#121824',
+                        neonCoral: '#FF5E3A',
+                        warmYellow: '#FFE330',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                        cursive: ['Caveat', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .neon-glow {
+            box-shadow: 0 0 25px rgba(255, 94, 58, 0.35);
+        }
+        .yellow-glow {
+            box-shadow: 0 0 30px rgba(255, 227, 48, 0.25);
+        }
+        /* Custom premium scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF5E3A;
+        }
+        /* Smooth scale zoom on hover */
+        .zoom-container img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .zoom-container:hover img {
+            transform: scale(1.05);
+        }
+        /* Soft pulse animation for visual cues */
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.03); }
+        }
+        .animate-subtle-pulse {
+            animation: subtlePulse 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-midnight text-slate-100 font-sans overflow-x-hidden antialiased">
+
+    <script>
+        // Symmetrical Two-Event CMS Configuration State mapping directly to the uploaded file names
+        window.seoulJunctionConfig = {
+            metadata: {
+                passcode: "54028803"
+            },
+            hero: {
+                title_en: "Ditch the Routine,\nMeet Global Minds",
+                title_kr: "지루한 주말 고민은 끝,\n힙한 글로벌 인맥을 만드는 법",
+                slogan_en: "DITCH THE ROUTINE, SPARK YOUR WEEKEND",
+                slogan_kr: "일상 탈출, 힙한 주말의 시작",
+                desc_en: "Tired of superficial clubs and awkward meetups? Escape to our premium language & cultural salon. Meet verified local professionals, expats, and Koreans under gorgeous city lights.",
+                desc_kr: "시끄럽고 가벼운 클럽이나 어색한 밋업에 지치셨나요? 이제 매주 금요일과 토요일 저녁, 감성적인 공간에서 신원 확실한 홍콩 글로벌 직장인, 로컬 현지인들과 함께 힙한 에너지를 나눠보세요.",
+                // Interactive Polaroid gallery sequence with customized handwritten captions
+                gallery: [
+                    {
+                        img: "1. arrival&check-in.png",
+                        cap_en: "\"1. Welcome & Check-In! Premium neon aura\" 🏷️",
+                        cap_kr: "\"1. 서울 포차 감성의 힙하고 설레는 체크인 라운지!\" 🏷️"
+                    },
+                    {
+                        img: "2. settle down&write name tag.png",
+                        cap_en: "\"2. Custom 3-Sec Name Tag! Write your details\" 🏷️",
+                        cap_kr: "\"2. 내가 좋아하는 한식과 배우고픈 실전 유행어 부착!\" 🏷️"
+                    },
+                    {
+                        img: "3.somaeck ratio brewing.png",
+                        cap_en: "\"3. POV: Your Friday Escape Starts Here...\" ✨",
+                        cap_kr: "\"3. 오늘 밤, 홍콩 속 특별한 소맥 살롱이 열립니다...\" ✨"
+                    },
+                    {
+                        img: "4.sincere ice-breaker cheer.png",
+                        cap_en: "\"4. Measure the perfect Somaek gold ratio!\" 🍺",
+                        cap_kr: "\"4. 소맥 황금 가이드를 보며 다 함께 시원하게 짠!\" 🍺"
+                    },
+                    {
+                        img: "5. speak only in korean.png",
+                        cap_en: "\"5. Speak Only in Korean card game!\" 🃏",
+                        cap_kr: "\"5. 이거 실화냐? 킹받네? 한국 최신 유행어 대격돌!\" 🃏"
+                    },
+                    {
+                        img: "6. clang-clang bell  ring.png",
+                        cap_en: "\"6. Clang-Clang! Symmetrical tables rotation!\" 🔄",
+                        cap_kr: "\"6. 댕-댕-! 벨소리와 함께 다채로운 소셜 로테이션!\" 🔄"
+                    },
+                    {
+                        img: "7. real cantonese . english  exchange.png",
+                        cap_en: "\"7. Real Cantonese & practical slangs study!\" 🌐",
+                        cap_kr: "\"7. 현지 친구에게 직접 배우는 뉘앙스 만점 광둥어!\" 🌐"
+                    },
+                    {
+                        img: "8. photo session &contact exchange.png",
+                        cap_en: "\"8. Beautiful group photo & exchange contacts!\" 📸",
+                        cap_kr: "\"8. 잊지 못할 불금 추억 소장, 인스타 QR 교환 타임!\" 📸"
+                    }
+                ]
+            },
+            // Interactive Program Flow Timeline Slideshow
+            programFlowGallery: [
+                {
+                    img: "1. arrival&check-in.png",
+                    title_en: "1. Arrival & Check-In",
+                    title_kr: "1. 웰컴 입장 및 체크인 웰컴 체크 🏷️",
+                    desc_en: "Step into our warm neon Pocha. Settle in, grab your name cards, and get ready for a memorable weekend night.",
+                    desc_kr: "아늑하고 힙한 조명의 정주포차 입장! 나만의 한글 네임택을 받고 오늘 대화할 매칭 파트너를 기대해 보세요."
+                },
+                {
+                    img: "2. settle down&write name tag.png",
+                    title_en: "2. Settle Down & Write Name Tag",
+                    title_kr: "2. 나만의 3초 네임택 완성 🏷️",
+                    desc_en: "Choose your favorite Korean food and write a funny Korean slang you want to teach or learn.",
+                    desc_kr: "내가 제일 좋아하는 한국 음식과 함께 오늘 밤 꼭 써먹어보고 싶은 최신 유행어를 적어 가슴에 부착합니다."
+                },
+                {
+                    img: "3.somaeck ratio brewing.png",
+                    title_en: "3. Somaek Ratio Brewing",
+                    title_kr: "3. 소맥 황금비율 주조 🍺",
+                    desc_en: "Mix your welcome Somaek using our custom illustrated ratio guidelines. Stun it with a spoon for rich foam!",
+                    desc_kr: "테이블에 놓인 가이드를 따라 소주와 카스를 황금 비율로 믹싱하고, 숟가락 타격으로 시원하게 맥주 거품을 일으켜 보세요."
+                },
+                {
+                    img: "4.sincere ice-breaker cheer.png",
+                    title_en: "4. Sincere Ice-Breaker Cheers",
+                    title_kr: "4. 긴장을 깨뜨리는 첫 건배 🥂",
+                    desc_en: "Say cheers loudly with your matching table partners. The ice melts instantly under warm neon glows.",
+                    desc_kr: "새롭게 만난 파트너들과 잔을 부딪치며 다 함께 외쳐보세요! \"Geonbae!\" 낯선 공기가 금세 따뜻함으로 채워집니다."
+                },
+                {
+                    img: "5. speak only in korean.png",
+                    title_en: "5. Speak Only in Korean!",
+                    title_kr: "5. 킹받네? 한국어 유행어 타임 🃏",
+                    desc_en: "Flip curated slang cards. Guess hilarious expressions while native Koreans guide your funny situational dramas.",
+                    desc_kr: "K-드라마 속 리얼 한국어 유행어를 맞추는 시간! 네이티브 친구들의 디렉션 하에 뉘앙스를 배우며 리얼 소통을 연습합니다."
+                },
+                {
+                    img: "6. clang-clang bell  ring.png",
+                    title_en: "6. Symmetrical Table Rotation",
+                    title_kr: "6. 타종과 테이블 회전 🔄",
+                    desc_en: "At the sound of the brass bell, rotate clockwise to meet a fresh dynamic group over authentic bites.",
+                    desc_kr: "호스트가 울리는 맑은 황동 종소리! 이제 테이블 회전 시간입니다. 자리를 이동해 새로운 파트너들과 또 다른 자극을 나눠보세요."
+                },
+                {
+                    img: "7. real cantonese . english  exchange.png",
+                    title_en: "7. Real Cantonese Exchange",
+                    title_kr: "7. 홍콩 로컬 실전 광둥어 학습 🌐",
+                    desc_en: "Draw characters on custom desk mats. Learn practical street slang from local Cantonese-speaking professionals.",
+                    desc_kr: "이번엔 홍콩 로컬 친구들의 차례! 홍콩의 맛집 추천과 책에서는 배울 수 없는 생생한 실전 광둥어를 함께 적고 말해봅니다."
+                },
+                {
+                    img: "8. photo session &contact exchange.png",
+                    title_en: "8. Photo Session & Contact Lock",
+                    title_kr: "8. 단체 촬영 및 연락처 교환 📸",
+                    desc_en: "Capture memorable moments with a full group picture and exchange Instagram handles or contact nodes.",
+                    desc_kr: "즐거운 만남을 마무리하며 어깨동무하고 한 컷! 이별의 아쉬움을 달래줄 인스타 핸들과 연락처를 주고받습니다."
+                }
+            ],
+            // Custom Ticket Invitation Slideshow list of photos (Aligned beautifully with actual uploaded images)
+            ticketGallery: [
+                "1. arrival&check-in.png",
+                "2. settle down&write name tag.png",
+                "3.somaeck ratio brewing.png",
+                "4.sincere ice-breaker cheer.png",
+                "5. speak only in korean.png",
+                "6. clang-clang bell  ring.png",
+                "7. real cantonese . english  exchange.png",
+                "8. photo session &contact exchange.png"
+            ],
+            refund: {
+                policy_en: "Cancellation Policy:\n• 7 Days Before: 100% Full Refund\n• 3 Days Before: 50% Refund\n• 1 Day Before: 30% Refund\n• Same Day / No-show: Non-refundable",
+                policy_kr: "취소 및 환불 규정 안내:\n• 모임 일주일 전: 100% 전액 환불\n• 모임 3일 전: 50% 환불\n• 모임 1일 전: 30% 환불\n• 모임 당일 취소 및 노쇼: 환불 불가"
+            },
+            events: {
+                friday: {
+                    title_en: "Somaek Culture Exchange Night",
+                    title_kr: "금요 소맥 살롱 파티",
+                    slogan_en: "FRIDAY SALON (금요 살롱)",
+                    slogan_kr: "금요일 밤의 소맥 미팅 파티",
+                    type_en: "Somaek Board Game & Culture Exchange",
+                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
+                    when: "6:00 PM - 8:00 PM (2 hrs)",
+                    where: "Central (센트럴)", 
+                    inclusions: "Somaek Board & Chimeg Packs",
+                    fee: "250 HKD"
+                },
+                saturday: {
+                    title_en: "Chimaek Language Exchange Party",
+                    title_kr: "토요 치맥 살롱 축제",
+                    slogan_en: "SATURDAY SALON (토요 살롱)",
+                    slogan_kr: "토요일 밤의 치맥 미팅 파티",
+                    type_en: "K-Pop Talk & Crispy Chimaek Party",
+                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
+                    when: "4:45 PM - 6:45 PM (2 hrs)",
+                    where: "Tsim Sha Tsui (침사추이)", 
+                    inclusions: "Chimaek Board & K-Pub Platter",
+                    fee: "250 HKD"
+                }
+            },
+            dateBookings: {
+                "2026-07-17": { 
+                    kr_seats_left: 10, 
+                    foreigner_seats_left: 10,
+                    title_en: "Somaek Culture Exchange Night",
+                    title_kr: "금요 소맥 살롱 파티",
+                    slogan_en: "FRIDAY SALON (금요 살롱)",
+                    slogan_kr: "금요일 밤의 소맥 미팅 파티",
+                    type_en: "Somaek Board Game & Culture Exchange",
+                    type_kr: "소맥 룰렛 보드게임 및 언어교환",
+                    where: "Central (센트럴)",
+                    fee: "250 HKD",
+                    inclusions: "Somaek Board & Chimeg Packs",
+                    when: "6:00 PM - 8:00 PM (2 hrs)"
+                },
+                "2026-07-18": { 
+                    kr_seats_left: 7, 
+                    foreigner_seats_left: 10,
+                    title_en: "Chimaek Language Exchange Party",
+                    title_kr: "토요 치맥 살롱 축제",
+                    slogan_en: "SATURDAY SALON (토요 살롱)",
+                    slogan_kr: "토요일 밤의 치맥 미팅 파티",
+                    type_en: "K-Pop Talk & Crispy Chimaek Party",
+                    type_kr: "K-Pop 음악 토크 및 바삭한 치맥 파티",
+                    where: "Tsim Sha Tsui (침사추이)",
+                    fee: "250 HKD",
+                    inclusions: "Chimaek Board & K-Pub Platter",
+                    when: "4:45 PM - 6:45 PM (2 hrs)"
+                },
+                "2026-07-24": { kr_seats_left: 10, foreigner_seats_left: 10 },
+                "2026-07-25": { kr_seats_left: 10, foreigner_seats_left: 10 },
+                "2026-08-14": { kr_seats_left: 8, foreigner_seats_left: 9 },
+                "2026-08-15": { kr_seats_left: 10, foreigner_seats_left: 10 },
+                "2026-08-21": { kr_seats_left: 5, foreigner_seats_left: 6 },
+                "2026-08-22": { kr_seats_left: 10, foreigner_seats_left: 10 }
+            },
+            design: {
+                seating_image: "4.sincere ice-breaker cheer.png",
+                ticket_image: "8. photo session &contact exchange.png"
+            }
+        };
+    </script>
+
+    <!-- Floating Navbar -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl bg-midnight/85 backdrop-blur-md border border-slate-800/80 rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 shadow-xl">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <div class="relative w-8 h-8 flex items-center justify-center">
+                <svg class="w-full h-full text-neonCoral group-hover:text-warmYellow transition-colors duration-300" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 32C8 20.9543 16.9543 12 28 12V12C33.5228 12 38 16.4772 38 22V32" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M32 8C32 19.0457 23.0457 28 12 28V28C6.47715 28 2 23.5228 2 18V8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <span class="font-extrabold text-lg tracking-wider text-white">SEOUL <span class="text-neonCoral">JUNCTION</span></span>
+        </a>
+
+        <!-- Controls -->
+        <div class="flex items-center gap-3">
+            <button onclick="toggleLanguage()" class="bg-darkgray border border-slate-700 hover:border-neonCoral text-xs font-bold px-3.5 py-2 rounded-full transition-all duration-300 flex items-center gap-2 text-slate-300 hover:text-white">
+                <i class="fa-solid fa-globe"></i>
+                <span id="lang-indicator">EN</span>
+            </button>
+            <button onclick="openAdminPortal()" class="bg-darkgray border border-slate-700 hover:border-warmYellow text-slate-400 hover:text-warmYellow w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300" title="Admin Portal">
+                <i class="fa-solid fa-lock text-xs"></i>
+            </button>
+            <a href="#rsvp-section" class="bg-neonCoral hover:bg-neonCoral/90 text-white font-bold text-xs md:text-sm px-6 py-2.5 rounded-full transition-all duration-300 neon-glow tracking-wide">
+                <span class="lang-en">RSVP NOW</span>
+                <span class="lang-kr hidden">예약하기</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,94,58,0.06)_0%,transparent_65%)] pointer-events-none"></div>
+
+        <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+            <!-- Left Header copy writing -->
+            <div class="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+                <!-- Symmetrical Slogan Badge -->
+                <span class="bg-neonCoral/10 text-neonCoral text-xs md:text-sm font-extrabold tracking-widest px-4 py-1.5 rounded-full mb-6 inline-flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-neonCoral animate-ping"></span>
+                    <span class="lang-en" id="dom-slogan-en">DITCH THE ROUTINE, SPARK YOUR WEEKEND</span>
+                    <span class="lang-kr hidden">일상 탈출, 힙한 주말의 시작</span>
+                </span>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-none mb-6">
+                    <span class="lang-en" id="dom-hero-title-en">Ditch the Routine,<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCoral to-warmYellow">Meet Global Minds</span></span>
+                    <span class="lang-kr hidden" id="dom-hero-title-kr">지루한 주말 고민은 끝,<br>힙한 글로벌 인맥을 만드는 법</span>
+                </h1>
+
+                <p class="text-slate-400 text-base md:text-lg max-w-lg mb-8 leading-relaxed">
+                    <span class="lang-en" id="dom-hero-desc-en">Tired of superficial clubs and awkward meetups? Escape to our premium language & cultural salon. Meet verified local professionals, expats, and Koreans under gorgeous city lights.</span>
+                    <span class="lang-kr hidden" id="dom-hero-desc-kr">시끄럽고 가벼운 클럽이나 어색한 밋업에 지치셨나요? 이제 매주 금요일과 토요일 저녁, 감성적인 공간에서 신원 확실한 홍콩 글로벌 직장인, 로컬 현지인들과 함께 힙한 에너지를 나눠보세요.</span>
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center lg:justify-start">
+                    <a href="#rsvp-section" class="bg-neonCoral hover:bg-neonCoral/90 text-white font-extrabold text-base px-8 py-4 rounded-full transition-all duration-300 neon-glow text-center flex items-center justify-center gap-2">
+                        <span class="lang-en">Book Your Weekend Seat</span>
+                        <span class="lang-kr hidden">주말 좌석 선점</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Live Stats -->
+                <div class="flex items-center gap-8 mt-12 pt-8 border-t border-slate-800/60 w-full justify-center lg:justify-start">
+                    <div>
+                        <p class="text-2xl font-black text-warmYellow" id="dom-stat-ratio">4:2:2</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider font-bold mt-1">
+                            <span class="lang-en">Golden Ratio</span>
+                            <span class="lang-kr hidden">황금 비율 매칭</span>
+                        </p>
+                    </div>
+                    <div class="w-px h-8 bg-slate-800"></div>
+                    <div>
+                        <p class="text-2xl font-black text-white">20</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider font-bold mt-1">
+                            <span class="lang-en">Max Seats / Session</span>
+                            <span class="lang-kr hidden">세션당 최대 정원</span>
+                        </p>
+                    </div>
+                    <div class="w-px h-8 bg-slate-800"></div>
+                    <div>
+                        <p class="text-2xl font-black text-white">80%</p>
+                        <p class="text-xs text-slate-500 uppercase tracking-wider font-bold mt-1">
+                            <span class="lang-en">Retention Rate</span>
+                            <span class="lang-kr hidden">높은 재참여율</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Polaroid frame with interactive click cyclical gallery slider -->
+            <div class="lg:col-span-6 relative flex justify-center">
+                <div class="absolute -top-8 -left-8 w-24 h-24 bg-neonCoral/20 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-warmYellow/15 rounded-full blur-2xl"></div>
+                
+                <!-- Interactive click polaroid card -->
+                <div class="bg-white p-4 pb-6 rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500 max-w-sm w-full border border-slate-200/90 relative group">
+                    <!-- Symmetrical Interactive Floating Controls -->
+                    <div class="absolute top-1/2 left-2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button type="button" onclick="navigateHeroGallery(-1)" class="w-9 h-9 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                    </div>
+                    <div class="absolute top-1/2 right-2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button type="button" onclick="navigateHeroGallery(1)" class="w-9 h-9 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+
+                    <!-- Image Slideshow Frame (Click anywhere on image to cycle) -->
+                    <div onclick="cycleHeroImageClick()" class="relative overflow-hidden rounded-xl mb-4 aspect-[4/5] bg-gradient-to-tr from-slate-900 via-darkgray to-slate-950 flex items-center justify-center border border-slate-200/10 cursor-pointer">
+                        <img id="dom-hero-slideshow-img" src="1. arrival&check-in.png" alt="Premium escape vibe" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-500 ease-in-out">
+
+                        <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                            <span id="dom-hero-slideshow-indicator">Timeline (1/8)</span>
+                        </div>
+                    </div>
+
+                    <!-- Handwritten Custom Caption dynamically aligned -->
+                    <div class="text-slate-900 font-cursive font-bold text-2xl text-center tracking-wide leading-tight px-2 min-h-[3rem] flex items-center justify-center" id="dom-hero-slideshow-caption">
+                        "Your Friday Escape to Seoul..." ✨
+                    </div>
+
+                    <!-- Interactive dot progress bar tracker dynamically populated -->
+                    <div id="hero-dots-container" class="flex items-center justify-center gap-1.5 mt-3 border-t border-slate-100 pt-3">
+                        <!-- Instantiated via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Program Flow Section -->
+    <section id="program-flow" class="py-24 bg-darkgray relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-neonCoral font-extrabold uppercase tracking-widest text-xs block mb-2">Signature Timeline</span>
+                <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight flex items-center justify-center gap-2.5">
+                    <i class="fa-solid fa-clock text-warmYellow text-2xl md:text-3.5xl"></i>
+                    <span class="lang-en">Program Flow / Timeline</span>
+                    <span class="lang-kr hidden">Program Flow / 프로그램 안내</span>
+                </h2>
+                <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                    <span class="lang-en">An engineered schedule mapping natural social integration, interactive team-building, and verified network expansion.</span>
+                    <span class="lang-kr hidden">물 흐르듯 자연스럽게 소통하고 친해질 수 있는 정교하게 고안된 서울 정션의 8단계 공식 주말 타임라인입니다.</span>
+                </p>
+            </div>
+
+            <!-- Symmetrical Interactive Timeline Board Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+                
+                <!-- Left: Symmetrical Interactive Step Buttons -->
+                <div class="lg:col-span-5 flex flex-col justify-between bg-midnight/60 border border-slate-800/80 rounded-3xl p-6 md:p-8 shadow-xl space-y-4">
+                    <h3 class="text-white font-extrabold text-lg border-b border-slate-800 pb-3 mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-bars-staggered text-neonCoral"></i>
+                        <span>Weekend Timeline (주말 여정)</span>
+                    </h3>
+
+                    <div class="space-y-2.5 max-h-[420px] overflow-y-auto pr-1">
+                        <!-- Step Button 1 -->
+                        <button onclick="jumpToFlowSlide(0)" id="flow-btn-0" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-rose-500 bg-rose-500/10 scale-[1.02]">
+                            <span class="w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
+                            <div>
+                                <h4 class="text-white font-extrabold text-sm">1. Arrival & Check-In (웰컴 입장)</h4>
+                                <p class="text-slate-400 text-[11px] mt-0.5">Settle down, write custom Name Tag</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 2 -->
+                        <button onclick="jumpToFlowSlide(1)" id="flow-btn-1" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">2</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">2. 3-Sec Name Tag (네임택 완성)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Favorite K-food & slangs to share</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 3 -->
+                        <button onclick="jumpToFlowSlide(2)" id="flow-btn-2" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">3</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">3. Somaek Brewing (황금소맥 제조)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Pouring & tapping with spoon for rich foam</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 4 -->
+                        <button onclick="jumpToFlowSlide(3)" id="flow-btn-3" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">4</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">4. Somaek Cheers Toast (첫 건배식)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Friendly welcome toast to dissolve tension</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 5 -->
+                        <button onclick="jumpToFlowSlide(4)" id="flow-btn-4" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">5</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">5. Speak Only in Korean (한국어 타임)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Guessing trendy slang card missions</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 6 -->
+                        <button onclick="jumpToFlowSlide(5)" id="flow-btn-5" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">6</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">6. Clang-Clang Bell Ring (타종 회전)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Host rings brass bell for clockwise shift</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 7 -->
+                        <button onclick="jumpToFlowSlide(6)" id="flow-btn-6" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">7</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">7. Cantonese & English (광둥어 슬랭)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Practical street phrases & local food tips</p>
+                            </div>
+                        </button>
+                        <!-- Step Button 8 -->
+                        <button onclick="jumpToFlowSlide(7)" id="flow-btn-7" class="w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent">
+                            <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0">8</span>
+                            <div>
+                                <h4 class="text-slate-300 font-bold text-sm">8. Photo & Contact exchange (단체 촬영)</h4>
+                                <p class="text-slate-500 text-[11px] mt-0.5">Group photos, contact locking under neon sign</p>
+                            </div>
+                        </button>
+                    </div>
+
+                    <a href="#rsvp-section" class="w-full bg-warmYellow hover:bg-warmYellow/90 text-slate-950 font-black text-xs py-3.5 rounded-2xl text-center transition-all duration-300 shadow-md block uppercase tracking-widest">
+                        RSVP TO JOIN THE FUN!
+                    </a>
+                </div>
+
+                <!-- Right: Symmetrical Interactive Polaroid Slideshow -->
+                <div class="lg:col-span-7 flex flex-col items-center">
+                    <div class="bg-white p-4 pb-6 rounded-2xl shadow-2xl rotate-1 hover:rotate-0 transition-all duration-500 w-full max-w-lg border border-slate-200/90 relative group">
+                        
+                        <!-- Left/Right Slide Chevrons -->
+                        <div class="absolute top-1/2 left-3 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button type="button" onclick="navigateFlowGallery(-1)" class="w-10 h-10 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                                <i class="fa-solid fa-chevron-left text-sm"></i>
+                            </button>
+                        </div>
+                        <div class="absolute top-1/2 right-3 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button type="button" onclick="navigateFlowGallery(1)" class="w-10 h-10 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                                <i class="fa-solid fa-chevron-right text-sm"></i>
+                            </button>
+                        </div>
+
+                        <!-- Image Slideshow (Clicking photo cycles) -->
+                        <div onclick="cycleFlowImageClick()" class="relative overflow-hidden rounded-xl mb-4 aspect-[4/3] bg-slate-950 flex items-center justify-center cursor-pointer border border-slate-100">
+                            <img id="dom-flow-slideshow-img" src="1. arrival&check-in.png" alt="Program flow active photo" class="absolute inset-0 w-full h-full object-cover z-10 transition-opacity duration-300 ease-in-out">
+                            
+                            <!-- Flow index label -->
+                            <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
+                                <span id="dom-flow-slideshow-indicator">Timeline (1/8)</span>
+                            </div>
+                        </div>
+
+                        <!-- Step Title & Description block beneath -->
+                        <div class="px-2 text-center text-slate-900">
+                            <h4 id="dom-flow-slideshow-title" class="font-black text-xl mb-1.5 text-[#FF5E3A]">1. Arrival & Check-In / 웰컴 및 체크인</h4>
+                            <p id="dom-flow-slideshow-desc" class="text-xs font-bold text-slate-500 leading-normal max-w-sm mx-auto">
+                                Settle down, write custom Name Tag
+                            </p>
+                        </div>
+
+                        <!-- Slide Indicator dots populated dynamically -->
+                        <div id="flow-dots-container" class="flex items-center justify-center gap-2 mt-4 border-t border-slate-100 pt-3.5">
+                            <!-- Instantiated via JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Different Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neonCoral/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Premium Copy Blocks -->
+                <div class="lg:col-span-6">
+                    <span class="text-neonCoral font-extrabold uppercase tracking-wider text-sm block mb-2">
+                        <span class="lang-en">Premium Social Engineering</span>
+                        <span class="lang-kr hidden">신개념 프리미엄 밋업</span>
+                    </span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-8 tracking-tight">
+                        <span class="lang-en">What Makes Seoul Junction Truly Different</span>
+                        <span class="lang-kr hidden">서울 정션만의 본질적인 차별점</span>
+                    </h2>
+
+                    <div class="space-y-6">
+                        <!-- Point 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 shrink-0 rounded-full bg-warmYellow/15 text-warmYellow flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">
+                                    <span class="lang-en">Perfect "2:2" or "2:2:2" Balance</span>
+                                    <span class="lang-kr hidden">엄격한 1:1 국적별 황금 비율</span>
+                                </h3>
+                                <p class="text-slate-400 text-sm">
+                                    <span class="lang-en">We mathematically match tables (Koreans to Locals/Expats) to avoid any isolated members and encourage active inclusion.</span>
+                                    <span class="lang-kr hidden">외톨이가 생기거나 한쪽 언어로만 쏠리지 않도록 한국인과 글로벌 멤버 비율을 완벽하게 계산해 테이블을 배정합니다.</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Point 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 shrink-0 rounded-full bg-neonCoral/15 text-neonCoral flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">
+                                    <span class="lang-en">Verified Professional Crowd</span>
+                                    <span class="lang-kr hidden">사전 예약제로 인증된 확실한 회원층</span>
+                                </h3>
+                                <p class="text-slate-400 text-sm">
+                                    <span class="lang-en">Pre-filtered registrations only. Connect with top-tier professionals from finance, consulting, tech, and creative fields.</span>
+                                    <span class="lang-kr hidden">100% 예약 사전 검증 시스템. 취객이나 무례한 사람을 통제하고 신원이 확실한 글로벌 인재들과 안전한 네트워크를 약속합니다.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Seating setup layout image with exact mapping -->
+                <div class="lg:col-span-6 relative flex justify-center">
+                    <div class="relative w-full max-w-lg aspect-video bg-darkgray border border-slate-800 rounded-3xl overflow-hidden shadow-2xl group zoom-container flex items-center justify-center">
+                        <img id="dom-design-seating-img" src="4.sincere ice-breaker cheer.png" alt="Engineered 2:2 / 2:2:2 seating table layout" class="absolute inset-0 w-full h-full object-cover z-10">
+                        <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/20 to-transparent z-15"></div>
+                        
+                        <div class="absolute bottom-5 left-5 right-5 z-20 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-neonCoral flex items-center justify-center text-white text-sm shrink-0 shadow-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Engineered Seating Layout</h4>
+                                <p class="text-xs text-slate-400">Strictly balanced 2:2 matching to optimize interactions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation Ticket Pass Section -->
+    <section class="py-24 bg-darkgray relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-warmYellow font-extrabold uppercase tracking-wider text-sm block mb-2">
+                    <span class="lang-en">Exclusive Pass</span>
+                    <span class="lang-kr hidden">공식 초대장</span>
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+                    <span class="lang-en">The Friday Pass</span>
+                    <span class="lang-kr hidden">티켓 구성 및 혜택</span>
+                </h2>
+                <p class="text-slate-400">
+                    <span class="lang-en">A premium curated experience inclusive of high-quality dining, networking matching, and exclusive spillover rewards.</span>
+                    <span class="lang-kr hidden">품격 있는 한식 페어링, 정밀 좌석 매칭, 2차 제휴 혜택 쿠폰이 모두 포함된 프리미엄 티켓입니다.</span>
+                </p>
+            </div>
+
+            <!-- Curated Orange-Red Invitation Card (Featuring Interactive Slider Inside!) -->
+            <div class="max-w-4xl mx-auto bg-[#FF5E3A] rounded-[32px] p-6 md:p-12 text-slate-950 flex flex-col justify-between shadow-2xl relative overflow-hidden transition-transform duration-500 hover:scale-[1.01] yellow-glow">
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 border-[16px] border-slate-950/10 rounded-full pointer-events-none"></div>
+
+                <!-- Top Row -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+                    <div class="lg:col-span-8">
+                        <h3 class="text-5xl md:text-7xl font-black tracking-tighter leading-none text-slate-950">
+                            YOUR FRIDAY<br>ESCAPE!
+                        </h3>
+                    </div>
+                    <div class="lg:col-span-4 border-l-0 lg:border-l-2 border-slate-950/20 pl-0 lg:pl-6">
+                        <p class="text-sm md:text-base font-extrabold leading-snug text-slate-950/90 uppercase tracking-tight">
+                            <span class="lang-en">Ditch the boring Friday routine.<br>Meet cool global minds over high-energy vibes.</span>
+                            <span class="lang-kr hidden">지루한 금요일 밤은 이제 끝.<br>힙한 글로벌 친구들과 뜨거운 에너지 속으로!</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Middle: Symmetrical Ticket Slideshow Banner with Controls -->
+                <div class="relative bg-slate-950 p-1.5 rounded-3xl overflow-hidden mb-12 shadow-lg border border-slate-950/80 aspect-[21/9] flex items-center justify-center group/ticket">
+                    <!-- Left/Right Slide Chevrons -->
+                    <div class="absolute top-1/2 left-4 -translate-y-1/2 z-30 opacity-0 group-hover/ticket:opacity-100 transition-opacity duration-300">
+                        <button type="button" onclick="navigateTicketGallery(-1)" class="w-10 h-10 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                    </div>
+                    <div class="absolute top-1/2 right-4 -translate-y-1/2 z-30 opacity-0 group-hover/ticket:opacity-100 transition-opacity duration-300">
+                        <button type="button" onclick="navigateTicketGallery(1)" class="w-10 h-10 rounded-full bg-midnight/90 backdrop-blur-sm text-white flex items-center justify-center hover:bg-neonCoral transition-all duration-300 shadow-md">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+
+                    <!-- Ticket Image Container (Clicking image cycles) -->
+                    <div onclick="cycleTicketImageClick()" class="w-full h-full relative cursor-pointer overflow-hidden rounded-2xl">
+                        <img id="dom-design-ticket-img" src="8. photo session &contact exchange.png" alt="Seoul Junction Ticket Vibe" class="absolute inset-0 w-full h-full object-cover rounded-2xl z-10 transition-opacity duration-300 ease-in-out">
+                        
+                        <!-- Ticket Badge Indicator -->
+                        <div class="absolute bottom-3 left-3 bg-midnight/90 backdrop-blur-md text-white text-[10px] px-3 py-1.5 rounded-full font-black shadow-lg z-20 uppercase tracking-widest flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-warmYellow animate-ping"></span>
+                            <span id="dom-ticket-slideshow-indicator">Vibe (1/8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: 4 Symmetrical Capsule Pill Badges -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 z-20">
+                    <!-- Pill 1: Time -->
+                    <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
+                        <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
+                            <i class="fa-regular fa-clock text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">WHEN</span>
+                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-when">Every Friday @ 6:00 PM</span>
+                        </div>
+                    </div>
+
+                    <!-- Pill 2: Venue -->
+                    <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
+                        <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
+                            <i class="fa-solid fa-location-dot text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-widest text-slate-500 font-extrabold none leading-none mb-1">WHERE</span>
+                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-where">Central Trendy K-Pub</span>
+                        </div>
+                    </div>
+
+                    <!-- Pill 3: Inclusion -->
+                    <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
+                        <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
+                            <i class="fa-solid fa-utensils text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">INCLUSIONS</span>
+                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-inclusions">Chimeg Pack & Drink</span>
+                        </div>
+                    </div>
+
+                    <!-- Pill 4: Pricing -->
+                    <div class="bg-slate-950/95 text-white rounded-full px-5 py-3.5 flex items-center gap-3.5 border border-slate-800/60 shadow-lg">
+                        <div class="w-10 h-10 rounded-full bg-warmYellow text-slate-950 flex items-center justify-center shrink-0 shadow-md">
+                            <i class="fa-solid fa-ticket text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] uppercase tracking-widest text-slate-500 font-extrabold leading-none mb-1">ENTRY FEE</span>
+                            <span class="text-xs font-black tracking-tight text-white leading-normal" id="dom-event-fee">250 HKD (Pre-booked)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Form Section (Two-Column Layout Matching bandicam screenshots) -->
+    <section id="rsvp-section" class="py-24 relative overflow-hidden bg-slate-900/40">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left Side: Select Event & Live Availability Dashboard -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Direct Action Event Selector Cards -->
+                    <div id="event-card-friday" onclick="switchActiveEvent('friday')" class="border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300 mb-4">
+                        <span class="bg-rose-500/10 text-rose-500 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">FRIDAY SALON (금요 살롱)</span>
+                        <h4 class="text-white font-black text-base mb-1" id="dom-friday-card-title">Somaek Culture Exchange Night</h4>
+                        <p class="text-slate-400 text-xs mb-3" id="dom-friday-card-sub">Central (센트럴)</p>
+                        <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5">
+                            <i class="fa-regular fa-clock text-rose-500"></i>
+                            <span id="dom-friday-card-when">6:00 PM - 8:00 PM (2 hrs)</span>
+                        </p>
+                        <div class="border-t border-slate-800/80 pt-3 flex justify-between text-xs font-bold text-slate-400">
+                            <span>Total Seats Left:</span>
+                            <span class="text-rose-500"><span id="dom-friday-total-seats">20</span> Seats Left</span>
+                        </div>
+                    </div>
+
+                    <div id="event-card-saturday" onclick="switchActiveEvent('saturday')" class="border border-slate-800 bg-midnight/30 rounded-2xl p-5 relative cursor-pointer transition-all duration-300">
+                        <span class="bg-teal-500/10 text-teal-400 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">SATURDAY SALON (토요 살롱)</span>
+                        <h4 class="text-slate-300 font-bold text-base mb-1" id="dom-saturday-card-title">Chimaek Language Exchange Party</h4>
+                        <p class="text-slate-500 text-xs mb-3" id="dom-saturday-card-sub">Tsim Sha Tsui (침사추이)</p>
+                        <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5">
+                            <i class="fa-regular fa-clock text-teal-400"></i>
+                            <span id="dom-saturday-card-when">4:45 PM - 6:45 PM (2 hrs)</span>
+                        </p>
+                        <div class="border-t border-slate-800/80 pt-3 flex justify-between text-xs font-bold text-slate-500">
+                            <span>Total Seats Left:</span>
+                            <span class="text-teal-400"><span id="dom-saturday-total-seats">17</span> Seats Left</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-darkgray border border-slate-800 rounded-3xl p-6 shadow-xl">
+                        <!-- Calendar Title and Month Selectors -->
+                        <div class="flex items-center justify-between mb-4 border-b border-slate-800/80 pb-3 gap-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular fa-calendar-check text-rose-500 text-lg"></i>
+                                <h3 class="text-white font-extrabold text-sm tracking-wider uppercase">Select Date (달력 모임 선택)</h3>
+                            </div>
+                            <!-- Calendar Popup Modal Trigger -->
+                            <button type="button" onclick="openCalendarDialog()" class="bg-rose-500 hover:bg-rose-600 text-white font-black text-xs px-3.5 py-1.5 rounded-full flex items-center gap-1.5 transition-all duration-300 shadow-md">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span class="lang-en">Open Calendar</span>
+                                <span class="lang-kr hidden">달력 팝업 열기</span>
+                            </button>
+                        </div>
+
+                        <!-- Dropdown Selectors for +/- 4 Years Jump (2022 to 2030) -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <!-- Year Dropdown -->
+                            <select id="cal-year-selector" onchange="handleCalendarSelectorsChange()" class="w-1/2 bg-midnight border border-slate-800 focus:border-rose-500 text-xs text-white px-3 py-2 rounded-xl outline-none font-bold">
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026" selected>2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                            <!-- Month Dropdown -->
+                            <select id="cal-month-selector" onchange="handleCalendarSelectorsChange()" class="w-1/2 bg-midnight border border-slate-800 focus:border-rose-500 text-xs text-white px-3 py-2 rounded-xl outline-none font-bold">
+                                <option value="0">January</option>
+                                <option value="1">February</option>
+                                <option value="2">March</option>
+                                <option value="3">April</option>
+                                <option value="4">May</option>
+                                <option value="5">June</option>
+                                <option value="6" selected>July</option>
+                                <option value="7">August</option>
+                                <option value="8">September</option>
+                                <option value="9">October</option>
+                                <option value="10">November</option>
+                                <option value="11">December</option>
+                            </select>
+                        </div>
+
+                        <!-- Calendar Grid Day Names -->
+                        <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
+                            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                        </div>
+
+                        <!-- Dynamic Calendar Container -->
+                        <div id="dynamic-calendar-grid" class="grid grid-cols-7 gap-1.5 text-center text-xs font-extrabold text-slate-400">
+                            <!-- Injected dynamically by JS calendar engine -->
+                        </div>
+
+                        <!-- Info details of selected date -->
+                        <div id="dynamic-calendar-details-card" class="border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative transition-all duration-300 mt-6">
+                            <!-- Currency Display -->
+                            <div class="absolute top-4 right-4 text-right">
+                                <span class="text-rose-500 font-black text-sm block" id="dom-dyn-card-fee">HKD 250</span>
+                                <span class="text-slate-500 text-[10px] block font-bold">About 43,000원</span>
+                            </div>
+
+                            <span class="bg-rose-500/10 text-rose-500 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 inline-block" id="dom-dyn-card-slogan">FRIDAY SALON (금요 살롱)</span>
+                            <h4 class="text-white font-black text-base mb-1" id="dom-dyn-card-title">Somaek Culture Exchange Night</h4>
+                            
+                            <!-- Sub Copy (Event Type Characteristics) -->
+                            <div class="text-amber-400 text-xs font-bold mt-1.5 mb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-sparkles text-[10px]"></i>
+                                <span id="dom-dyn-card-type">Somaek Board Game & Culture Exchange</span>
+                            </div>
+                            <p class="text-slate-400 text-xs mb-3" id="dom-dyn-card-sub">금요일 밤의 소맥 미팅 파티</p>
+                            
+                            <!-- Real Time / Day Variable -->
+                            <p class="text-slate-500 text-xs font-semibold mb-4 flex items-center gap-1.5">
+                                <i class="fa-regular fa-clock text-rose-500"></i>
+                                <span id="dom-dyn-card-when">Friday, July 17, 2026 @ 6:00 PM</span>
+                            </p>
+
+                            <!-- Total Counters Footer -->
+                            <div class="border-t border-slate-800/80 pt-3 flex justify-between text-xs font-bold text-slate-400">
+                                <span>Total Seats Left (남은 전체 공석):</span>
+                                <span class="text-rose-500"><span id="dom-dyn-total-seats">20</span> Seats Left / 20 Total</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Availability Dashboard Console -->
+                    <div class="bg-darkgray border border-slate-800 rounded-3xl p-6 shadow-xl">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+                            <h3 class="text-white font-extrabold text-sm tracking-wider uppercase">Live Availability Dashboard (실시간 현황)</h3>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-normal mb-4">
+                            We match native Koreans and expats at an exact golden ratio. Select your language/nationality circle to see live available seats left.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <!-- KR Live counter -->
+                            <div class="bg-midnight/60 border border-slate-800 rounded-xl p-3.5 text-center">
+                                <span class="text-xs text-slate-500 font-bold block uppercase mb-1">KR (한국인)</span>
+                                <span class="text-2xl font-black text-rose-500" id="dom-panel-kr-seats">10</span>
+                                <span class="text-[10px] text-slate-500 block font-semibold mt-0.5">Seats Left</span>
+                            </div>
+                            <!-- Foreigner Live counter -->
+                            <div class="bg-midnight/60 border border-slate-800 rounded-xl p-3.5 text-center">
+                                <span class="text-xs text-slate-500 font-bold block uppercase mb-1">Foreigner (외국인)</span>
+                                <span class="text-2xl font-black text-teal-400" id="dom-panel-foreigner-seats">10</span>
+                                <span class="text-[10px] text-slate-500 block font-semibold mt-0.5">Seats Left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Interactive Reservation Form -->
+                <div class="lg:col-span-7 bg-white text-slate-900 rounded-[32px] p-6 md:p-10 shadow-2xl">
+                    <div class="flex items-center gap-2.5 border-b border-slate-100 pb-5 mb-6">
+                        <i class="fa-solid fa-pen-nib text-slate-800 text-xl"></i>
+                        <h3 class="font-extrabold text-2xl text-slate-900">Reservation Form (예약 상세 작성)</h3>
+                    </div>
+
+                    <form id="junction-rsvp-form" onsubmit="processBookingForm(event)" class="space-y-6">
+                        
+                        <!-- 1. Nationality Selection -->
+                        <div>
+                            <label class="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-2.5">
+                                1. Nationality / Language Group (참가자 국적/언어 그룹) <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="hidden" id="input-nationality" required value="">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- KR Card option -->
+                                <button type="button" onclick="selectNationality('kr')" id="card-nat-kr" class="border border-slate-200 hover:border-[#FF5E3A] hover:bg-[#FF5E3A]/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300">
+                                    <span class="font-black text-lg text-slate-900 mb-1">KR</span>
+                                    <span class="text-xs font-extrabold text-slate-600">Korean (한국인)</span>
+                                    <span class="bg-rose-500/10 text-rose-500 text-[10px] font-black px-2.5 py-0.5 rounded-full mt-2" id="form-kr-counter">10 Left (남음)</span>
+                                </button>
+                                
+                                <!-- Foreigner Card option -->
+                                <button type="button" onclick="selectNationality('foreigner')" id="card-nat-foreigner" class="border border-slate-200 hover:border-teal-500 hover:bg-teal-500/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300">
+                                    <span class="font-black text-lg text-slate-900 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-globe text-sm text-teal-500"></i> Foreigner</span>
+                                    <span class="text-xs font-extrabold text-slate-600">Foreigner (외국인)</span>
+                                    <span class="bg-teal-500/10 text-teal-600 text-[10px] font-black px-2.5 py-0.5 rounded-full mt-2" id="form-foreigner-counter">10 Left (남음)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Gender Selection -->
+                        <div>
+                            <label class="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-2.5">
+                                2. Gender (성별) <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="hidden" id="input-gender" required value="">
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <button type="button" onclick="selectGender('Male')" id="btn-gender-male" class="border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900">
+                                    Male (남성)
+                                </button>
+                                <button type="button" onclick="selectGender('Female')" id="btn-gender-female" class="border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900">
+                                    Female (여성)
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3 & 4. Name and WhatsApp -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-1.5">
+                                    3. Full Name (성함) <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="text" id="input-fullname" required placeholder="예: 홍길동 (James)" class="w-full bg-slate-50 border border-slate-200 focus:border-rose-500 rounded-xl px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-300 placeholder:text-slate-400">
+                            </div>
+                            <div>
+                                <label class="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-1.5">
+                                    4. WhatsApp No. (왓츠앱/연락처) <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="tel" id="input-whatsapp" required placeholder="e.g. +852 5402 8803 or 010-..." class="w-full bg-slate-50 border border-slate-200 focus:border-rose-500 rounded-xl px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-300 placeholder:text-slate-400">
+                            </div>
+                        </div>
+
+                        <!-- 5. Languages Spoken -->
+                        <div>
+                            <label class="block text-slate-500 text-xs font-bold uppercase tracking-wider mb-1.5">
+                                5. Languages Spoken / Practice (가능 언어) <span class="text-rose-500">*</span>
+                            </label>
+                            <input type="text" id="input-languages" required placeholder="e.g. Korean(Native), English(Upper), Cantonese(Basic)" class="w-full bg-slate-50 border border-slate-200 focus:border-rose-500 rounded-xl px-4 py-3.5 text-sm text-slate-900 outline-none transition-all duration-300 placeholder:text-slate-400">
+                        </div>
+
+                        <!-- 6. Payment Method FPS Card Box -->
+                        <div class="bg-[#FF5E3A]/5 border border-[#FF5E3A]/20 rounded-2xl p-5 relative overflow-hidden">
+                            <span class="absolute top-4 right-4 bg-slate-900 text-white font-black text-[9px] px-2.5 py-1 rounded-full uppercase tracking-wider">ONLY FPS SUPPORTED</span>
+                            
+                            <h4 class="text-slate-900 font-extrabold text-sm flex items-center gap-1.5 mb-2">
+                                <i class="fa-solid fa-bolt text-amber-500"></i> FPS Fast Transfer (홍콩 빠른송금)
+                            </h4>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Our system now exclusively accepts secure HKD FPS transfers for reservation processing.<br>
+                                (현재 정원 승인을 위한 결제 수단으로 홍콩 현지 FPS 빠른송금만 단독 지원하고 있습니다.)
+                            </p>
+                            
+                            <!-- Display FPS Mobile Account to transfer to -->
+                            <div class="mt-4 pt-4 border-t border-slate-200/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white p-3.5 rounded-xl border border-slate-100">
+                                <div>
+                                    <span class="text-[10px] text-slate-400 font-extrabold uppercase block leading-none mb-1">FPS TARGET PHONE NUMBER</span>
+                                    <span class="text-base font-black text-rose-500 tracking-wider">+852 5402 8803</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-[10px] text-slate-400 font-extrabold uppercase block leading-none mb-1">FPS ACCOUNT HOLDER</span>
+                                    <span class="text-xs font-extrabold text-slate-700">Seoul Junction HK</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Symmetrical Legal Cancellation Policy Box -->
+                        <div class="border-2 border-amber-500/20 bg-amber-500/5 rounded-2xl p-5 relative">
+                            <h4 class="text-amber-600 font-extrabold text-xs flex items-center gap-1.5 mb-2 uppercase tracking-widest">
+                                <i class="fa-solid fa-triangle-exclamation"></i> Refund & Cancellation Policy (취소 및 환불 정책)
+                            </h4>
+                            <div class="text-xs text-slate-700 leading-relaxed space-y-1">
+                                <p class="font-extrabold text-slate-900 border-b border-slate-200/50 pb-1.5 mb-1.5">
+                                    Please review our official refund guidelines before completing your transfer:
+                                </p>
+                                <div class="font-semibold text-slate-600 whitespace-pre-line" id="dom-refund-policy-kr">
+                                    • 모임 일주일 전: 100% 전액 환불
+                                    • 모임 3일 전: 50% 환불
+                                    • 모임 1일 전: 30% 환불
+                                    • 모임 당일 취소 및 노쇼: 환불 불가
+                                </div>
+                                <div class="font-medium text-slate-500 whitespace-pre-line text-[11px] border-t border-slate-200/50 pt-1.5 mt-1.5" id="dom-refund-policy-en">
+                                    • 7 Days Before: 100% Full Refund
+                                    • 3 Days Before: 50% Refund
+                                    • 1 Day Before: 30% Refund
+                                    • Same Day / No-show: Non-refundable
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-[#FF5E3A] hover:bg-[#FF5E3A]/90 text-white font-black text-base py-4 rounded-xl transition-all duration-300 neon-glow flex items-center justify-center gap-2 mt-4 cursor-pointer shadow-lg shadow-rose-500/20">
+                            Confirm & Book (결제 및 예약 진행)
+                        </button>
+
+                        <!-- Bottom External Contact Tools -->
+                        <div class="border-t border-slate-100 pt-6 mt-6">
+                            <p class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                                <i class="fa-regular fa-comments"></i> Inquiry & Send Screenshot (예약 문의 및 왓츠앱 입금 확인 사진 전송)
+                            </p>
+                            <div class="grid grid-cols-2 gap-3">
+                                <a href="https://wa.me/85254028803" target="_blank" class="bg-[#00c853] hover:bg-[#00b0ff]/10 text-white hover:text-[#00c853] border hover:border-[#00c853] font-bold text-xs py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-md">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    <span>WhatsApp Help</span>
+                                </a>
+                                <a href="https://open.kakao.com/o/sEH9kyDi" target="_blank" class="bg-[#ffbb00] hover:bg-[#00b0ff]/10 text-slate-900 hover:text-amber-500 border hover:border-amber-500 font-bold text-xs py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-md">
+                                    <i class="fa-solid fa-comment-dots text-lg"></i>
+                                    <span>KakaoTalk Help</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-midnight/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-darkgray border border-slate-800 p-8 rounded-[32px] max-w-md w-full text-center relative shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-16 h-16 rounded-full bg-neonCoral/15 text-neonCoral flex items-center justify-center font-black text-2xl mx-auto mb-6">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <h3 class="text-2xl font-extrabold text-white mb-3">
+                <span class="lang-en">Booking Submitted!</span>
+                <span class="lang-kr hidden">예약 접수 완료!</span>
+            </h3>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                <span class="lang-en">We've received your request. To confirm your Golden 4:2:2 seating placement, please process the FPS/PayMe 250 HKD payment via the WhatsApp link sent to you within 2 hours.</span>
+                <span class="lang-kr hidden">예약이 완료되었습니다! 최적의 황금 4:2:2 비율 테이블 매칭을 확정하기 위해, 2시간 이내에 전송되는 안내 메세지를 따라 FPS/PayMe 사전결제를 완료해 주세요.</span>
+            </p>
+
+            <button onclick="closeModal()" class="w-full bg-[#FF5E3A] hover:bg-[#FF5E3A]/90 text-white font-bold py-3.5 rounded-xl transition-all duration-300 neon-glow cursor-pointer">
+                <span class="lang-en">Got it, Let's Connect!</span>
+                <span class="lang-kr hidden">확인 및 결제 진행</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Symmetrical Real-Time Calendar Modal -->
+    <div id="calendar-dialog-modal" class="fixed inset-0 bg-midnight/96 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-darkgray border border-slate-800 p-6 rounded-[32px] max-w-md w-full relative shadow-2xl">
+            <!-- Close Modal -->
+            <button onclick="closeCalendarDialog()" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- Calendar Header -->
+            <div class="text-center mb-6">
+                <span class="text-neonCoral font-extrabold uppercase tracking-widest text-[10px] block mb-1">Seoul Junction Scheduler</span>
+                <h3 class="text-white font-black text-xl flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-warmYellow"></i>
+                    <span id="dom-dialog-calendar-title">July 2026</span>
+                </h3>
+            </div>
+
+            <!-- Calendar Day Header Labels -->
+            <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">
+                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+            </div>
+
+            <!-- Dynamic Days Symmetrical Grid -->
+            <div id="modal-calendar-grid" class="grid grid-cols-7 gap-2 text-center text-xs font-extrabold text-slate-400 mb-6">
+                <!-- Injected dynamically by JS calendar engine -->
+            </div>
+
+            <p class="text-[10px] text-slate-500 text-center leading-normal">
+                Neon glowing dates contain active premium social salon sessions.<br>
+                (네온 색상으로 불이 들어온 날짜를 누르시면 예약 상세가 아래 폼에 적용됩니다.)
+            </p>
+        </div>
+    </div>
+
+    <!-- Admin Portal Passcode Modal -->
+    <div id="admin-auth-modal" class="fixed inset-0 bg-midnight/95 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-darkgray border border-slate-800 p-8 rounded-[32px] max-w-sm w-full text-center shadow-2xl">
+            <div class="w-12 h-12 rounded-full bg-warmYellow/10 text-warmYellow flex items-center justify-center text-xl mx-auto mb-4">
+                <i class="fa-solid fa-key"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Admin Portal</h3>
+            <p class="text-slate-400 text-xs mb-6">Please enter the security master passcode to edit.</p>
+            
+            <div class="space-y-4">
+                <input type="password" id="admin-passcode-input" placeholder="••••••••" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-xl px-4 py-3 text-center text-sm text-slate-100 outline-none tracking-widest">
+                <p id="admin-auth-error" class="text-rose-500 text-xs hidden">Invalid passcode. Please try again.</p>
+                
+                <div class="flex gap-3">
+                    <button onclick="closeAdminAuth()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-3 rounded-xl transition-all duration-300">Cancel</button>
+                    <button onclick="verifyAdminPasscode()" class="w-1/2 bg-warmYellow hover:bg-warmYellow/90 text-slate-950 text-xs font-black py-3 rounded-xl transition-all duration-300 shadow-lg">Authenticate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin CMS Dashboard Modal -->
+    <div id="admin-dashboard" class="fixed inset-0 bg-midnight/98 overflow-y-auto z-50 hidden">
+        <div class="max-w-4xl mx-auto px-4 py-12">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-6 mb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-warmYellow text-slate-950 flex items-center justify-center rounded-xl font-bold">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-extrabold text-white">Seoul Junction CMS</h2>
+                        <p class="text-xs text-slate-400">Manage real-time events, details, and pictures</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="closeAdminDashboard()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold px-4 py-2.5 rounded-xl transition-all duration-300">Exit Admin</button>
+                </div>
+            </div>
+
+            <!-- Content Editing Workspace -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+                <!-- Left Control Form -->
+                <div class="lg:col-span-8 space-y-8">
+                    
+                    <!-- Symmetrical 2-Month Scheduler Tab -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl">
+                        <h3 class="text-sm font-bold text-rose-500 uppercase tracking-wider mb-2"><i class="fa-solid fa-calendar-plus mr-1.5"></i> 📅 2-Month Date-by-Date Scheduler</h3>
+                        <p class="text-[10px] text-slate-400 leading-relaxed mb-6">Select a date within the active 2-month window to edit its specific details (Venue, Seats, Slogan, and Type). If saved, this specific date will load custom values instead of the default template.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 pb-6 border-b border-slate-800/80">
+                            <div>
+                                <label class="block text-slate-300 text-xs mb-1.5 font-bold">Select Date to Edit / Create</label>
+                                <select id="edit-scheduler-date-select" onchange="handleSchedulerDateSelect()" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-100 outline-none font-bold">
+                                    <option value="2026-07-17">2026-07-17 (Somaek)</option>
+                                    <option value="2026-07-18">2026-07-18 (Chimaek)</option>
+                                    <option value="2026-07-24">2026-07-24 (Somaek)</option>
+                                    <option value="2026-07-25">2026-07-25 (Chimaek)</option>
+                                    <option value="2026-08-14">2026-08-14 (Somaek)</option>
+                                    <option value="2026-08-15">2026-08-15 (Chimaek)</option>
+                                    <option value="2026-08-21">2026-08-21 (Somaek)</option>
+                                    <option value="2026-08-22">2026-08-22 (Chimaek)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-slate-300 text-xs mb-1.5 font-bold">Or Add custom Date (YYYY-MM-DD)</label>
+                                <div class="flex gap-2">
+                                    <input type="text" id="edit-scheduler-date-manual" placeholder="2026-07-31" class="w-2/3 bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-100 outline-none font-bold">
+                                    <button type="button" onclick="addManualSchedulerDate()" class="w-1/3 bg-rose-500 hover:bg-rose-600 text-white font-black text-xs rounded-lg transition-all duration-300">Add Date</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Scheduler detail forms -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Date Title (English)</label>
+                                <input type="text" id="edit-sch-title-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Date Title (Korean)</label>
+                                <input type="text" id="edit-sch-title-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (English)</label>
+                                <input type="text" id="edit-sch-slogan-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (Korean)</label>
+                                <input type="text" id="edit-sch-slogan-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Characteristics (English)</label>
+                                <input type="text" id="edit-sch-type-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Characteristics (Korean)</label>
+                                <input type="text" id="edit-sch-type-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Where (Venue Selection)</label>
+                                <select id="edit-sch-where" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                                    <option value="Central (센트럴)">Central (센트럴)</option>
+                                    <option value="Causeway Bay (코즈웨이)">Causeway Bay (코즈웨이)</option>
+                                    <option value="Wan Chai (완차이)">Wan Chai (완차이)</option>
+                                    <option value="Tsim Sha Tsui (침사추이)">Tsim Sha Tsui (침사추이)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Entry Fee</label>
+                                <input type="text" id="edit-sch-fee" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">KR Seats Available</label>
+                                <input type="number" id="edit-sch-kr-seats" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Foreigner Seats Available</label>
+                                <input type="number" id="edit-sch-for-seats" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-2 text-xs text-slate-200 outline-none">
+                            </div>
+                        </div>
+                        <button type="button" onclick="saveSchedulerDateSettings()" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-black text-xs py-3.5 rounded-xl transition-all duration-300 mt-6 shadow-lg shadow-rose-500/10">
+                            Save/Update Selected Date Schedule Settings
+                        </button>
+                    </div>
+
+                    <!-- Cancellation Policy Editor Section -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl">
+                        <h3 class="text-sm font-bold text-amber-500 uppercase tracking-wider mb-4"><i class="fa-solid fa-scale-balanced mr-1.5"></i> Cancellation & Refund Policy Settings</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Korean Refund Guidelines (취소 규정 한국어)</label>
+                                <textarea id="edit-refund-kr" rows="4" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none whitespace-pre-line"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">English Refund Guidelines (취소 규정 영어)</label>
+                                <textarea id="edit-refund-en" rows="4" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none whitespace-pre-line"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Friday Event Template (Fallback) -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl">
+                        <h3 class="text-sm font-bold text-rose-500 uppercase tracking-wider mb-4"><i class="fa-solid fa-calendar-day mr-1.5"></i> [Friday Event Presets] Symmetrical Fallback</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (English)</label>
+                                <input type="text" id="edit-event-friday-title-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (Korean)</label>
+                                <input type="text" id="edit-event-friday-title-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (English)</label>
+                                <input type="text" id="edit-event-friday-slogan-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (Korean)</label>
+                                <input type="text" id="edit-event-friday-slogan-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (English)</label>
+                                <input type="text" id="edit-event-friday-type-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (Korean)</label>
+                                <input type="text" id="edit-event-friday-type-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">When (Time & Duration Only)</label>
+                                <input type="text" id="edit-event-friday-when" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Where (Venue Dropdown)</label>
+                                <select id="edit-event-friday-where" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                                    <option value="Central (센트럴)">Central (센트럴)</option>
+                                    <option value="Causeway Bay (코즈웨이)">Causeway Bay (코즈웨이)</option>
+                                    <option value="Wan Chai (완차이)">Wan Chai (완차이)</option>
+                                    <option value="Tsim Sha Tsui (침사추이)">Tsim Sha Tsui (침사추이)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Inclusions</label>
+                                <input type="text" id="edit-event-friday-inclusions" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Entry Fee (Price badge)</label>
+                                <input type="text" id="edit-event-friday-fee" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Saturday Event Template (Fallback) -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl">
+                        <h3 class="text-sm font-bold text-teal-400 uppercase tracking-wider mb-4"><i class="fa-solid fa-calendar-day mr-1.5"></i> [Saturday Event Presets] Symmetrical Fallback</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (English)</label>
+                                <input type="text" id="edit-event-saturday-title-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Title (Korean)</label>
+                                <input type="text" id="edit-event-saturday-title-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (English)</label>
+                                <input type="text" id="edit-event-saturday-slogan-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Slogan (Korean)</label>
+                                <input type="text" id="edit-event-saturday-slogan-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (English)</label>
+                                <input type="text" id="edit-event-saturday-type-en" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Event Type/Characteristics (Korean)</label>
+                                <input type="text" id="edit-event-saturday-type-kr" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">When (Time & Duration Only)</label>
+                                <input type="text" id="edit-event-saturday-when" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Where (Venue Dropdown)</label>
+                                <select id="edit-event-saturday-where" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                                    <option value="Central (센트럴)">Central (센트럴)</option>
+                                    <option value="Causeway Bay (코즈웨이)">Causeway Bay (코즈웨이)</option>
+                                    <option value="Wan Chai (완차이)">Wan Chai (완차이)</option>
+                                    <option value="Tsim Sha Tsui (침사추이)">Tsim Sha Tsui (침사추이)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Inclusions</label>
+                                <input type="text" id="edit-event-saturday-inclusions" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Entry Fee (Price badge)</label>
+                                <input type="text" id="edit-event-saturday-fee" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banner Copy -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
+                        <h3 class="text-sm font-bold text-warmYellow uppercase tracking-wider"><i class="fa-solid fa-paragraph mr-1.5"></i> Hero Title & Description</h3>
+                        <div>
+                            <label class="block text-slate-400 text-xs mb-1.5 font-bold">Hero Title (English)</label>
+                            <textarea id="edit-hero-title-en" rows="2" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-xs mb-1.5 font-bold">Hero Title (Korean)</label>
+                            <textarea id="edit-hero-title-kr" rows="2" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none"></textarea>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Hero Description (English)</label>
+                                <textarea id="edit-hero-desc-en" rows="4" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Hero Description (Korean)</label>
+                                <textarea id="edit-hero-desc-kr" rows="4" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual & Picture Assets -->
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
+                        <h3 class="text-sm font-bold text-warmYellow uppercase tracking-wider"><i class="fa-solid fa-image mr-1.5"></i> Visual Image Mapping</h3>
+                        <p class="text-[10px] text-slate-500 leading-relaxed">Choose from pre-loaded designs or type custom file names if you dropped new photos in the directory folder.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Main Banner Image</label>
+                                <input type="text" id="edit-img-hero" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Blueprint Seating Image</label>
+                                <input type="text" id="edit-img-seating" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-slate-400 text-xs mb-1.5 font-bold">Orange Pass Ticket Photo</label>
+                                <input type="text" id="edit-img-ticket" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3.5 py-2.5 text-xs text-slate-200 outline-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Save & Sync Toolbox -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="bg-darkgray border border-slate-800 p-6 rounded-2xl space-y-4">
+                        <h4 class="text-xs font-extrabold text-white uppercase tracking-widest border-b border-slate-800 pb-2">Publishing Desk</h4>
+                        
+                        <!-- Local Export Option -->
+                        <div class="bg-midnight/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-neonCoral font-extrabold text-[10px] tracking-wider uppercase block mb-1">Local Export</span>
+                            <p class="text-[10px] text-slate-400 leading-normal mb-3">No database needed. Edits compile directly into a new downloadable index.html file with your variables baked in.</p>
+                            <p class="text-[10px] text-emerald-400/90 font-extrabold leading-normal mb-3">Includes 2-month schedules and refund presets.</p>
+                            <button onclick="exportUpdatedHtml()" class="w-full bg-neonCoral hover:bg-neonCoral/90 text-white text-xs font-bold py-2.5 rounded-lg transition-all duration-300 shadow-md cursor-pointer flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-file-export"></i> Export index.html
+                            </button>
+                        </div>
+
+                        <!-- Security Options -->
+                        <div class="bg-midnight/50 p-4 rounded-xl border border-slate-800">
+                            <span class="text-slate-400 font-extrabold text-[10px] tracking-wider uppercase block mb-1">Passcode Management</span>
+                            <p class="text-[10px] text-slate-500 leading-normal mb-3">Update your dashboard entry credential.</p>
+                            <input type="password" id="edit-metadata-passcode" class="w-full bg-midnight border border-slate-800 focus:border-warmYellow rounded-lg px-3 py-1.5 text-xs text-center text-slate-200 outline-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Symmetrical Real-Time Footer -->
+    <footer class="bg-midnight border-t border-slate-900 py-12">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <p class="text-sm text-slate-500">© 2026 Seoul Junction HK. All rights reserved.</p>
+                <p class="text-xs text-slate-600 mt-1">Curated with authentic visual aesthetics and high-level social experiences.</p>
+            </div>
+            <div class="flex gap-6">
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com/seoul_junction" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-neonCoral transition-colors duration-300" title="Instagram">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/profile.php?id=61591529474297" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-neonCoral transition-colors duration-300" title="Facebook">
+                    <i class="fa-brands fa-facebook text-xl"></i>
+                </a>
+                <!-- WhatsApp Link -->
+                <a href="https://wa.me/85254028803" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-neonCoral transition-colors duration-300" title="WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script JS -->
+    <script>
+        let currentLang = 'EN';
+        let selectedNat = '';
+        let selectedGender = '';
+        let activeEventKey = 'friday'; // 'friday' or 'saturday'
+        
+        // Symmetrical date definitions
+        const baseCurrentDate = new Date(2026, 6, 13); // July 13, 2026
+        let calendarSelectedYear = 2026;
+        let calendarSelectedMonth = 6; // Index 6 is July
+
+        // Active slide indices for carousels
+        let heroActiveSlideIndex = 0;
+        let flowActiveSlideIndex = 0;
+        let ticketActiveSlideIndex = 0;
+
+        // Initialize values from config schema
+        window.onload = function() {
+            renderDynamicContent();
+            renderCalendarDays(calendarSelectedYear, calendarSelectedMonth);
+            populateSchedulerDateDropdown();
+            
+            // Render slide navigation dots dynamically to prevent code breakage when arrays resize
+            renderDotsDynamically();
+
+            // Initial slide loading
+            jumpToHeroSlide(0);
+            jumpToFlowSlide(0);
+            jumpToTicketSlide(0);
+
+            // Default selected date initialization
+            selectCalendarDate("2026-07-17");
+        };
+
+        // Instantiates dot progress bars based dynamically on the array length (Symmetrical logic)
+        function renderDotsDynamically() {
+            const data = window.seoulJunctionConfig;
+            
+            // Hero section gallery dots
+            const heroDotsContainer = document.getElementById('hero-dots-container');
+            if (heroDotsContainer && data.hero.gallery) {
+                heroDotsContainer.innerHTML = '';
+                data.hero.gallery.forEach((_, idx) => {
+                    const dot = document.createElement('span');
+                    dot.id = `dot-hero-${idx}`;
+                    dot.className = "w-1.5 h-1.5 rounded-full bg-slate-300 transition-all duration-300 cursor-pointer hover:bg-slate-400";
+                    dot.onclick = () => jumpToHeroSlide(idx);
+                    heroDotsContainer.appendChild(dot);
+                });
+            }
+
+            // Flow section timeline dots
+            const flowDotsContainer = document.getElementById('flow-dots-container');
+            if (flowDotsContainer && data.programFlowGallery) {
+                flowDotsContainer.innerHTML = '';
+                data.programFlowGallery.forEach((_, idx) => {
+                    const dot = document.createElement('span');
+                    dot.id = `dot-flow-${idx}`;
+                    dot.className = "w-1.5 h-1.5 rounded-full bg-slate-300 transition-all duration-300 cursor-pointer hover:bg-slate-400";
+                    dot.onclick = () => jumpToFlowSlide(idx);
+                    flowDotsContainer.appendChild(dot);
+                });
+            }
+        }
+
+        // Render dynamic CMS values into target DOM elements
+        function renderDynamicContent() {
+            const data = window.seoulJunctionConfig;
+            if (!data) return;
+
+            // Slogan bindings
+            document.getElementById('dom-slogan-en').textContent = data.hero.slogan_en;
+            document.getElementById('dom-slogan-kr').textContent = data.hero.slogan_kr;
+
+            // Hero section titles
+            document.getElementById('dom-hero-title-en').innerHTML = data.hero.title_en.replace(/\n/g, '<br>');
+            document.getElementById('dom-hero-title-kr').innerHTML = data.hero.title_kr.replace(/\n/g, '<br>');
+            document.getElementById('dom-hero-desc-en').textContent = data.hero.desc_en;
+            document.getElementById('dom-hero-desc-kr').textContent = data.hero.desc_kr;
+
+            // Symmetrical Polaroid slideshow first index loading
+            if (data.hero.gallery && data.hero.gallery.length > 0) {
+                document.getElementById('dom-hero-slideshow-img').src = data.hero.gallery[0].img;
+                document.getElementById('dom-hero-slideshow-caption').textContent = currentLang === 'EN' ? data.hero.gallery[0].cap_en : data.hero.gallery[0].cap_kr;
+            }
+
+            // Ticket Slideshow Banner initialization
+            if (data.ticketGallery && data.ticketGallery.length > 0) {
+                document.getElementById('dom-design-ticket-img').src = data.ticketGallery[0];
+            }
+
+            // Refund Policy bindings
+            document.getElementById('dom-refund-policy-kr').textContent = data.refund.policy_kr;
+            document.getElementById('dom-refund-policy-en').textContent = data.refund.policy_en;
+
+            // Seating map & orange pass ticket mapping
+            document.getElementById('dom-design-seating-img').src = data.design.seating_image;
+
+            // Synchronize static card values
+            document.getElementById('dom-friday-card-sub').textContent = data.events.friday.where;
+            document.getElementById('dom-saturday-card-sub').textContent = data.events.saturday.where;
+            document.getElementById('dom-friday-card-title').textContent = data.events.friday.title_en;
+            document.getElementById('dom-saturday-card-title').textContent = data.events.saturday.title_en;
+            document.getElementById('dom-friday-card-when').textContent = data.events.friday.when;
+            document.getElementById('dom-saturday-card-when').textContent = data.events.saturday.when;
+
+            // Recalculate static total counters
+            let friTotal = (data.dateBookings["2026-07-17"]?.kr_seats_left + data.dateBookings["2026-07-17"]?.foreigner_seats_left) || 20;
+            let satTotal = (data.dateBookings["2026-07-18"]?.kr_seats_left + data.dateBookings["2026-07-18"]?.foreigner_seats_left) || 17;
+            document.getElementById('dom-friday-total-seats').textContent = friTotal;
+            document.getElementById('dom-saturday-total-seats').textContent = satTotal;
+        }
+
+        // Toggle language (English / Korean)
+        function toggleLanguage() {
+            const krElements = document.querySelectorAll('.lang-kr');
+            const enElements = document.querySelectorAll('.lang-en');
+            const indicator = document.getElementById('lang-indicator');
+
+            if (currentLang === 'EN') {
+                currentLang = 'KR';
+                indicator.innerText = 'KR';
+                enElements.forEach(el => el.classList.add('hidden'));
+                krElements.forEach(el => el.classList.remove('hidden'));
+            } else {
+                currentLang = 'EN';
+                indicator.innerText = 'EN';
+                krElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+            }
+            updateAvailabilityPanel();
+            jumpToHeroSlide(heroActiveSlideIndex);
+            jumpToFlowSlide(flowActiveSlideIndex);
+            jumpToTicketSlide(ticketActiveSlideIndex);
+        }
+
+        // Symmetrical Click-to-Cycle Hero Slideshow Logic
+        function cycleHeroImageClick() {
+            const gallery = window.seoulJunctionConfig.hero.gallery;
+            if (!gallery || gallery.length === 0) return;
+            
+            let nextIndex = (heroActiveSlideIndex + 1) % gallery.length;
+            jumpToHeroSlide(nextIndex);
+        }
+
+        // Symmetrical chevrons navigation
+        function navigateHeroGallery(direction) {
+            const gallery = window.seoulJunctionConfig.hero.gallery;
+            if (!gallery || gallery.length === 0) return;
+
+            let nextIndex = heroActiveSlideIndex + direction;
+            if (nextIndex < 0) {
+                nextIndex = gallery.length - 1;
+            } else if (nextIndex >= gallery.length) {
+                nextIndex = 0;
+            }
+            jumpToHeroSlide(nextIndex);
+        }
+
+        // Jump to a specific slide dot
+        function jumpToHeroSlide(index) {
+            const gallery = window.seoulJunctionConfig.hero.gallery;
+            if (!gallery || gallery.length === 0) return;
+
+            heroActiveSlideIndex = index;
+            const targetSlide = gallery[index];
+
+            // Animate transition using subtle opacity change
+            const imgElement = document.getElementById('dom-hero-slideshow-img');
+            if (imgElement) {
+                imgElement.style.opacity = '0.3';
+                setTimeout(() => {
+                    imgElement.src = targetSlide.img;
+                    document.getElementById('dom-hero-slideshow-caption').textContent = currentLang === 'EN' ? targetSlide.cap_en : targetSlide.cap_kr;
+                    document.getElementById('dom-hero-slideshow-indicator').textContent = `Timeline (${index + 1}/${gallery.length})`;
+                    imgElement.style.opacity = '1';
+                }, 150);
+            }
+
+            // Update dot progress bar colors dynamically
+            for (let i = 0; i < gallery.length; i++) {
+                const dot = document.getElementById(`dot-hero-${i}`);
+                if (dot) {
+                    if (i === index) {
+                        dot.className = "w-2.5 h-2.5 rounded-full bg-[#FF5E3A] scale-110 transition-all duration-300 cursor-pointer";
+                    } else {
+                        dot.className = "w-1.5 h-1.5 rounded-full bg-slate-300 transition-all duration-300 cursor-pointer hover:bg-slate-400";
+                    }
+                }
+            }
+        }
+
+        // Symmetrical Click-to-Cycle Ticket Slideshow Logic
+        function cycleTicketImageClick() {
+            const gallery = window.seoulJunctionConfig.ticketGallery;
+            if (!gallery || gallery.length === 0) return;
+
+            let nextIndex = (ticketActiveSlideIndex + 1) % gallery.length;
+            jumpToTicketSlide(nextIndex);
+        }
+
+        // Symmetrical ticket chevrons navigation
+        function navigateTicketGallery(direction) {
+            const gallery = window.seoulJunctionConfig.ticketGallery;
+            if (!gallery || gallery.length === 0) return;
+
+            let nextIndex = ticketActiveSlideIndex + direction;
+            if (nextIndex < 0) {
+                nextIndex = gallery.length - 1;
+            } else if (nextIndex >= gallery.length) {
+                nextIndex = 0;
+            }
+            jumpToTicketSlide(nextIndex);
+        }
+
+        // Jump to ticket slide and render
+        function jumpToTicketSlide(index) {
+            const gallery = window.seoulJunctionConfig.ticketGallery;
+            if (!gallery || gallery.length === 0) return;
+
+            ticketActiveSlideIndex = index;
+            const imgElement = document.getElementById('dom-design-ticket-img');
+            if (imgElement) {
+                imgElement.style.opacity = '0.3';
+                setTimeout(() => {
+                    imgElement.src = gallery[index];
+                    document.getElementById('dom-ticket-slideshow-indicator').textContent = `Vibe (${index + 1}/${gallery.length})`;
+                    imgElement.style.opacity = '1';
+                }, 150);
+            }
+        }
+
+        // Symmetrical Click-to-Cycle Program Flow Slideshow Logic
+        function cycleFlowImageClick() {
+            const flowGallery = window.seoulJunctionConfig.programFlowGallery;
+            if (!flowGallery || flowGallery.length === 0) return;
+
+            let nextIndex = (flowActiveSlideIndex + 1) % flowGallery.length;
+            jumpToFlowSlide(nextIndex);
+        }
+
+        function navigateFlowGallery(direction) {
+            const flowGallery = window.seoulJunctionConfig.programFlowGallery;
+            if (!flowGallery || flowGallery.length === 0) return;
+
+            let nextIndex = flowActiveSlideIndex + direction;
+            if (nextIndex < 0) {
+                nextIndex = flowGallery.length - 1;
+            } else if (nextIndex >= flowGallery.length) {
+                nextIndex = 0;
+            }
+            jumpToFlowSlide(nextIndex);
+        }
+
+        function jumpToFlowSlide(index) {
+            const flowGallery = window.seoulJunctionConfig.programFlowGallery;
+            if (!flowGallery || flowGallery.length === 0) return;
+
+            flowActiveSlideIndex = index;
+            const targetSlide = flowGallery[index];
+
+            // Animate transition using subtle opacity change
+            const imgElement = document.getElementById('dom-flow-slideshow-img');
+            if (imgElement) {
+                imgElement.style.opacity = '0.3';
+                setTimeout(() => {
+                    imgElement.src = targetSlide.img;
+                    document.getElementById('dom-flow-slideshow-indicator').textContent = `Step (${index + 1}/${flowGallery.length})`;
+                    document.getElementById('dom-flow-slideshow-title').textContent = currentLang === 'EN' ? targetSlide.title_en : targetSlide.title_kr;
+                    document.getElementById('dom-flow-slideshow-desc').textContent = currentLang === 'EN' ? targetSlide.desc_en : targetSlide.desc_kr;
+                    imgElement.style.opacity = '1';
+                }, 150);
+            }
+
+            // Update dot indicators
+            for (let i = 0; i < flowGallery.length; i++) {
+                const dot = document.getElementById(`dot-flow-${i}`);
+                if (dot) {
+                    if (i === index) {
+                        dot.className = "w-2.5 h-2.5 rounded-full bg-[#FF5E3A] scale-110 transition-all duration-300 cursor-pointer";
+                    } else {
+                        dot.className = "w-1.5 h-1.5 rounded-full bg-slate-300 transition-all duration-300 cursor-pointer hover:bg-slate-400";
+                    }
+                }
+            }
+
+            // Sync with Step list highlight on the Left Panel
+            for (let i = 0; i < 8; i++) {
+                const btn = document.getElementById(`flow-btn-${i}`);
+                if (btn) {
+                    const iconSpan = btn.querySelector('span');
+                    const labelTitle = btn.querySelector('h4');
+                    const labelDesc = btn.querySelector('p');
+
+                    if (i === index) {
+                        // Highlight Active Step
+                        btn.className = "w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-rose-500 bg-rose-500/10 scale-[1.02]";
+                        if (iconSpan) iconSpan.className = "w-6 h-6 rounded-full bg-rose-500 text-white font-bold text-xs flex items-center justify-center shrink-0";
+                        if (labelTitle) labelTitle.className = "text-white font-extrabold text-sm";
+                        if (labelDesc) labelDesc.className = "text-slate-400 text-[11px] mt-0.5";
+                    } else {
+                        // Inactive step
+                        btn.className = "w-full text-left flex items-start gap-3.5 p-3 rounded-2xl border transition-all duration-300 border-slate-800 hover:border-slate-700 bg-transparent";
+                        if (iconSpan) iconSpan.className = "w-6 h-6 rounded-full bg-slate-800 text-slate-300 font-bold text-xs flex items-center justify-center shrink-0";
+                        if (labelTitle) labelTitle.className = "text-slate-300 font-bold text-sm";
+                        if (labelDesc) labelDesc.className = "text-slate-500 text-[11px] mt-0.5";
+                    }
+                }
+            }
+        }
+
+        // Symmetrical Real Calendar Generator Engine
+        function renderCalendarDays(year, month) {
+            const gridContainer = document.getElementById('dynamic-calendar-grid');
+            const modalGridContainer = document.getElementById('modal-calendar-grid');
+            gridContainer.innerHTML = '';
+            modalGridContainer.innerHTML = '';
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Symmetrical date ranges for 2 months booking advance rules
+            const maxBookingLimitDate = new Date(2026, 8, 30); // Index 8 is Sept
+
+            // Generate spacers
+            for (let i = 0; i < firstDayIndex; i++) {
+                gridContainer.appendChild(document.createElement('span'));
+                modalGridContainer.appendChild(document.createElement('span'));
+            }
+
+            // Generate calendar days
+            for (let day = 1; day <= totalDaysInMonth; day++) {
+                const dateObj = new Date(year, month, day);
+                const dayOfWeek = dateObj.getDay(); // 5 = Fri, 6 = Sat
+                const dateString = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+
+                // Primary View Button Day
+                const dayButton = document.createElement('button');
+                dayButton.type = 'button';
+                dayButton.textContent = day;
+                dayButton.className = "py-2 rounded-xl text-slate-400 font-extrabold transition-all duration-300 relative flex items-center justify-center ";
+
+                // Modal View Button Day (Symmetrical match)
+                const modalDayButton = document.createElement('button');
+                modalDayButton.type = 'button';
+                modalDayButton.textContent = day;
+                modalDayButton.className = "py-2.5 rounded-xl text-slate-400 font-extrabold transition-all duration-300 relative flex items-center justify-center ";
+
+                // Check dates boundary
+                const isPastDate = dateObj < new Date(baseCurrentDate.getFullYear(), baseCurrentDate.getMonth(), baseCurrentDate.getDate());
+                const isTooFarFuture = dateObj > maxBookingLimitDate;
+
+                if (dayOfWeek === 5 || dayOfWeek === 6) {
+                    if (isPastDate) {
+                        const pastStyle = "line-through text-slate-600 bg-midnight/10 cursor-not-allowed";
+                        dayButton.className += pastStyle;
+                        dayButton.disabled = true;
+                        modalDayButton.className += pastStyle;
+                        modalDayButton.disabled = true;
+                    } else if (isTooFarFuture) {
+                        const waitStyle = "border border-dashed border-slate-800 bg-midnight/30 text-slate-500 cursor-help";
+                        dayButton.className += waitStyle;
+                        dayButton.onclick = () => showCustomToast("This session opens 2 months in advance! Please check back closer to the date.");
+                        modalDayButton.className += waitStyle;
+                        modalDayButton.onclick = () => showCustomToast("This session opens 2 months in advance! Please check back closer to the date.");
+                    } else {
+                        // Active Open event
+                        const eventKey = (dayOfWeek === 5) ? 'friday' : 'saturday';
+                        const ringColor = (eventKey === 'friday') ? 'border-rose-500 text-rose-400 bg-rose-500/5' : 'border-teal-400 text-teal-400 bg-teal-400/5';
+                        const dotColor = (eventKey === 'friday') ? 'bg-rose-500' : 'bg-teal-400';
+
+                        const activeStyle = `border-2 ${ringColor} hover:scale-110 cursor-pointer shadow-md shadow-neonCoral/5 `;
+                        dayButton.className += activeStyle;
+                        dayButton.onclick = () => selectCalendarDate(dateString);
+                        
+                        modalDayButton.className += activeStyle;
+                        modalDayButton.onclick = () => selectDateFromCalendar(dateString);
+
+                        // Add live little dynamic bubble dot
+                        const bubble1 = document.createElement('span');
+                        bubble1.className = `absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${dotColor}`;
+                        dayButton.appendChild(bubble1);
+
+                        const bubble2 = document.createElement('span');
+                        bubble2.className = `absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${dotColor}`;
+                        modalDayButton.appendChild(bubble2);
+                    }
+                } else {
+                    // Regular non-event weekdays (disabled)
+                    const disabledStyle = "text-slate-700 bg-midnight/5 cursor-not-allowed";
+                    dayButton.className += disabledStyle;
+                    dayButton.disabled = true;
+                    modalDayButton.className += disabledStyle;
+                    modalDayButton.disabled = true;
+                }
+
+                dayButton.id = `cal-day-${dateString}`;
+                modalDayButton.id = `modal-cal-day-${dateString}`;
+
+                gridContainer.appendChild(dayButton);
+                modalGridContainer.appendChild(modalDayButton);
+            }
+        }
+
+        // Manage user clicks inside the custom date grid
+        function selectCalendarDate(dateString) {
+            const dateParts = dateString.split('-');
+            const year = parseInt(dateParts[0]);
+            const month = parseInt(dateParts[1]) - 1;
+            const day = parseInt(dateParts[2]);
+            const clickedDate = new Date(year, month, day);
+            const dayOfWeek = clickedDate.getDay();
+
+            activeEventKey = (dayOfWeek === 5) ? 'friday' : 'saturday';
+
+            // Clear previous highlight rings
+            document.querySelectorAll('#dynamic-calendar-grid button').forEach(btn => {
+                btn.classList.remove('ring-4', 'ring-warmYellow', 'scale-105');
+            });
+            document.querySelectorAll('#modal-calendar-grid button').forEach(btn => {
+                btn.classList.remove('ring-4', 'ring-warmYellow', 'scale-105');
+            });
+
+            // Highlight selected day button
+            const selectedBtn = document.getElementById(`cal-day-${dateString}`);
+            if (selectedBtn) {
+                selectedBtn.classList.add('ring-4', 'ring-warmYellow', 'scale-105');
+            }
+            const selectedModalBtn = document.getElementById(`modal-cal-day-${dateString}`);
+            if (selectedModalBtn) {
+                selectedModalBtn.classList.add('ring-4', 'ring-warmYellow', 'scale-105');
+            }
+
+            // Sync with current Select Event Card borders on Left Column
+            const fridayCard = document.getElementById('event-card-friday');
+            const saturdayCard = document.getElementById('event-card-saturday');
+            if (activeEventKey === 'friday') {
+                fridayCard.className = "border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300 mb-4";
+                saturdayCard.className = "border border-slate-800 bg-midnight/30 rounded-2xl p-5 relative cursor-pointer transition-all duration-300";
+            } else {
+                fridayCard.className = "border border-slate-800 bg-midnight/30 rounded-2xl p-5 relative cursor-pointer transition-all duration-300 mb-4";
+                saturdayCard.className = "border-2 border-rose-500 bg-rose-500/5 rounded-2xl p-5 relative cursor-pointer transition-all duration-300";
+            }
+
+            // Update availability dashboards
+            updateAvailabilityPanel(dateString);
+        }
+
+        // Switch Active card selectors
+        function switchActiveEvent(key) {
+            let selectedDateStr = "";
+            for (let day = 1; day <= 31; day++) {
+                const tempDate = new Date(calendarSelectedYear, calendarSelectedMonth, day);
+                const dayOfWeek = tempDate.getDay();
+                const eventKey = (dayOfWeek === 5) ? 'friday' : 'saturday';
+                if (eventKey === key) {
+                    selectedDateStr = `${calendarSelectedYear}-${String(calendarSelectedMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                    break;
+                }
+            }
+            if (selectedDateStr) {
+                selectCalendarDate(selectedDateStr);
+            }
+        }
+
+        // Update active availability counts, form labels, and ticket pass
+        function updateAvailabilityPanel(dateString) {
+            const data = window.seoulJunctionConfig;
+            if (!data) return;
+
+            if (!dateString) {
+                dateString = (activeEventKey === 'friday') ? "2026-07-17" : "2026-07-18";
+            }
+
+            const activePreset = data.events[activeEventKey];
+            
+            if (!data.dateBookings[dateString]) {
+                data.dateBookings[dateString] = { 
+                    kr_seats_left: (activeEventKey === 'friday') ? 10 : 7, 
+                    foreigner_seats_left: 10 
+                };
+            }
+
+            const dayConfig = data.dateBookings[dateString];
+
+            // Resolve dynamic customized parameters or fallback
+            const finalTitle = dayConfig.title_en || activePreset.title_en;
+            const finalSloganEn = dayConfig.slogan_en || activePreset.slogan_en;
+            const finalSloganKr = dayConfig.slogan_kr || activePreset.slogan_kr;
+            const finalTypeEn = dayConfig.type_en || activePreset.type_en;
+            const finalTypeKr = dayConfig.type_kr || activePreset.type_kr;
+            const finalWhere = dayConfig.where || activePreset.where;
+            const finalFee = dayConfig.fee || activePreset.fee;
+            const finalInclusions = dayConfig.inclusions || activePreset.inclusions;
+            const finalWhen = dayConfig.when || activePreset.when;
+
+            const krLeft = parseInt(dayConfig.kr_seats_left) || 0;
+            const forLeft = parseInt(dayConfig.foreigner_seats_left) || 0;
+            const totalLeft = krLeft + forLeft;
+
+            // Render live stats on availability console
+            document.getElementById('dom-panel-kr-seats').textContent = krLeft;
+            document.getElementById('dom-panel-foreigner-seats').textContent = forLeft;
+            document.getElementById('form-kr-counter').textContent = `${krLeft} Left (남음)`;
+            document.getElementById('form-foreigner-counter').textContent = `${forLeft} Left (남음)`;
+
+            // Format date pretty text
+            const dateParts = dateString.split('-');
+            const prettyDate = new Date(parseInt(dateParts[0]), parseInt(dateParts[1]) - 1, parseInt(dateParts[2]));
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const prettyDateString = prettyDate.toLocaleDateString('en-US', options);
+
+            // Update Ticket Info Badge Capsule
+            document.getElementById('dom-event-when').textContent = finalWhen;
+            document.getElementById('dom-event-where').textContent = finalWhere;
+            document.getElementById('dom-event-inclusions').textContent = finalInclusions;
+            document.getElementById('dom-event-fee').textContent = finalFee;
+
+            // Render Active Calendar Display Card info dynamically
+            document.getElementById('dom-dyn-card-title').textContent = finalTitle;
+            document.getElementById('dom-dyn-card-sub').textContent = currentLang === 'EN' ? finalTitle : (dayConfig.title_kr || activePreset.title_kr);
+            document.getElementById('dom-dyn-card-slogan').textContent = currentLang === 'EN' ? finalSloganEn : finalSloganKr;
+            document.getElementById('dom-dyn-card-type').textContent = currentLang === 'EN' ? finalTypeEn : finalTypeKr;
+            document.getElementById('dom-dyn-card-when').textContent = `${prettyDateString} @ ${finalWhen}`;
+            document.getElementById('dom-dyn-card-fee').textContent = finalFee;
+            document.getElementById('dom-dyn-total-seats').textContent = totalLeft;
+
+            // Sync card view styling on the left column dynamically
+            if (activeEventKey === 'friday') {
+                document.getElementById('dom-friday-card-title').textContent = finalTitle;
+                document.getElementById('dom-friday-card-sub').textContent = finalWhere;
+                document.getElementById('dom-friday-card-when').textContent = finalWhen;
+                document.getElementById('dom-friday-total-seats').textContent = totalLeft;
+            } else {
+                document.getElementById('dom-saturday-card-title').textContent = finalTitle;
+                document.getElementById('dom-saturday-card-sub').textContent = finalWhere;
+                document.getElementById('dom-saturday-card-when').textContent = finalWhen;
+                document.getElementById('dom-saturday-total-seats').textContent = totalLeft;
+            }
+
+            // Save active date to form metadata
+            document.getElementById('junction-rsvp-form').dataset.selectedDate = dateString;
+
+            // Style dynamic card based on weekday
+            const detailsCard = document.getElementById('dynamic-calendar-details-card');
+            if (activeEventKey === 'friday') {
+                detailsCard.style.borderColor = "#FF5E3A";
+                detailsCard.style.backgroundColor = "rgba(255, 94, 58, 0.05)";
+            } else {
+                detailsCard.style.borderColor = "#2DD4BF";
+                detailsCard.style.backgroundColor = "rgba(45, 212, 191, 0.05)";
+            }
+        }
+
+        // Open/Close dialog methods
+        function openCalendarDialog() {
+            const modal = document.getElementById('calendar-dialog-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('dom-dialog-calendar-title').textContent = document.getElementById('cal-month-selector').options[calendarSelectedMonth].text + " " + calendarSelectedYear;
+        }
+
+        function closeCalendarDialog() {
+            const modal = document.getElementById('calendar-dialog-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // On dropdown selector values changed
+        function handleCalendarSelectorsChange() {
+            calendarSelectedYear = parseInt(document.getElementById('cal-year-selector').value);
+            calendarSelectedMonth = parseInt(document.getElementById('cal-month-selector').value);
+            renderCalendarDays(calendarSelectedYear, calendarSelectedMonth);
+        }
+
+        // Symmetrical action when date is selected from calendar popup modal
+        function selectDateFromCalendar(keyDate) {
+            closeCalendarDialog();
+            selectCalendarDate(keyDate);
+        }
+
+        // Populate scheduler date selection dropdown dynamically
+        function populateSchedulerDateDropdown() {
+            const dropdown = document.getElementById('edit-scheduler-date-select');
+            if (!dropdown) return;
+            dropdown.innerHTML = '';
+            
+            const sortedDates = Object.keys(window.seoulJunctionConfig.dateBookings).sort();
+            sortedDates.forEach(dStr => {
+                const opt = document.createElement('option');
+                opt.value = dStr;
+                opt.textContent = `${dStr} (${dStr.endsWith('7') || dStr.endsWith('4') || dStr.endsWith('1') ? 'Somaek' : 'Chimaek'})`;
+                dropdown.appendChild(opt);
+            });
+            handleSchedulerDateSelect();
+        }
+
+        // Handle selection change in admin date-by-date scheduler
+        function handleSchedulerDateSelect() {
+            const selectDate = document.getElementById('edit-scheduler-date-select').value;
+            const data = window.seoulJunctionConfig;
+            
+            const dateParts = selectDate.split('-');
+            const dayOfWeek = new Date(parseInt(dateParts[0]), parseInt(dateParts[1])-1, parseInt(dateParts[2])).getDay();
+            const activePreset = (dayOfWeek === 5) ? data.events.friday : data.events.saturday;
+
+            if (!data.dateBookings[selectDate]) {
+                data.dateBookings[selectDate] = { kr_seats_left: 10, foreigner_seats_left: 10 };
+            }
+
+            const dayConfig = data.dateBookings[selectDate];
+
+            // Load form fields
+            document.getElementById('edit-sch-title-en').value = dayConfig.title_en || activePreset.title_en;
+            document.getElementById('edit-sch-title-kr').value = dayConfig.title_kr || activePreset.title_kr;
+            document.getElementById('edit-sch-slogan-en').value = dayConfig.slogan_en || activePreset.slogan_en;
+            document.getElementById('edit-sch-slogan-kr').value = dayConfig.slogan_kr || activePreset.slogan_kr;
+            document.getElementById('edit-sch-type-en').value = dayConfig.type_en || activePreset.type_en;
+            document.getElementById('edit-sch-type-kr').value = dayConfig.type_kr || activePreset.type_kr;
+            document.getElementById('edit-sch-where').value = dayConfig.where || activePreset.where;
+            document.getElementById('edit-sch-fee').value = dayConfig.fee || activePreset.fee;
+            document.getElementById('edit-sch-kr-seats').value = dayConfig.kr_seats_left !== undefined ? dayConfig.kr_seats_left : 10;
+            document.getElementById('edit-sch-for-seats').value = dayConfig.foreigner_seats_left !== undefined ? dayConfig.foreigner_seats_left : 10;
+        }
+
+        // Add custom date manually to scheduler list
+        function addManualSchedulerDate() {
+            const manualDate = document.getElementById('edit-scheduler-date-manual').value.trim();
+            const regex = /^\d{4}-\d{2}-\d{2}$/;
+            if (!regex.test(manualDate)) {
+                showCustomToast("Please enter date in correct YYYY-MM-DD format (예: 2026-07-31)!");
+                return;
+            }
+
+            if (!window.seoulJunctionConfig.dateBookings[manualDate]) {
+                window.seoulJunctionConfig.dateBookings[manualDate] = { kr_seats_left: 10, foreigner_seats_left: 10 };
+            }
+            populateSchedulerDateDropdown();
+            document.getElementById('edit-scheduler-date-select').value = manualDate;
+            handleSchedulerDateSelect();
+            showCustomToast(`Symmetrical schedule placeholder for ${manualDate} successfully created!`);
+        }
+
+        // Save detailed custom date configurations
+        function saveSchedulerDateSettings() {
+            const selectedDate = document.getElementById('edit-scheduler-date-select').value;
+            const data = window.seoulJunctionConfig;
+
+            if (!data.dateBookings[selectedDate]) {
+                data.dateBookings[selectedDate] = {};
+            }
+
+            data.dateBookings[selectedDate] = {
+                title_en: document.getElementById('edit-sch-title-en').value,
+                title_kr: document.getElementById('edit-sch-title-kr').value,
+                slogan_en: document.getElementById('edit-sch-slogan-en').value,
+                slogan_kr: document.getElementById('edit-sch-slogan-kr').value,
+                type_en: document.getElementById('edit-sch-type-en').value,
+                type_kr: document.getElementById('edit-sch-type-kr').value,
+                where: document.getElementById('edit-sch-where').value,
+                fee: document.getElementById('edit-sch-fee').value,
+                kr_seats_left: parseInt(document.getElementById('edit-sch-kr-seats').value) || 10,
+                foreigner_seats_left: parseInt(document.getElementById('edit-sch-for-seats').value) || 10
+            };
+
+            // Force refresh active calendar and dashboard
+            renderCalendarDays(calendarSelectedYear, calendarSelectedMonth);
+            selectCalendarDate(selectedDate);
+            showCustomToast(`Schedule parameters for ${selectedDate} updated successfully! Don't forget to Export index.html to save permanently.`);
+        }
+
+        // Symmetrical toast notification system
+        function showCustomToast(message) {
+            alert(message); // Fallback robust simple alert
+        }
+
+        // Process reservation and route directly to WhatsApp endpoint
+        function processBookingForm(event) {
+            event.preventDefault();
+
+            const natGroup = document.getElementById('input-nationality').value;
+            const gender = document.getElementById('input-gender').value;
+            const fullName = document.getElementById('input-fullname').value;
+            const whatsappNo = document.getElementById('input-whatsapp').value;
+            const languages = document.getElementById('input-languages').value;
+            const targetDate = document.getElementById('junction-rsvp-form').dataset.selectedDate || "2026-07-17";
+
+            if (!natGroup) {
+                showCustomToast("Please select Nationality Group (국적/언어 그룹을 선택해 주세요)!");
+                return;
+            }
+            if (!gender) {
+                showCustomToast("Please select your gender (성별을 선택해 주세요)!");
+                return;
+            }
+
+            // Deduct seat counter from selected date temporarily
+            const config = window.seoulJunctionConfig;
+            if (!config.dateBookings[targetDate]) {
+                config.dateBookings[targetDate] = { kr_seats_left: 10, foreigner_seats_left: 10 };
+            }
+
+            const daySeats = config.dateBookings[targetDate];
+            if (natGroup === 'kr') {
+                if (parseInt(daySeats.kr_seats_left) > 0) {
+                    daySeats.kr_seats_left = parseInt(daySeats.kr_seats_left) - 1;
+                }
+            } else {
+                if (parseInt(daySeats.foreigner_seats_left) > 0) {
+                    daySeats.foreigner_seats_left = parseInt(daySeats.foreigner_seats_left) - 1;
+                }
+            }
+            renderDynamicContent();
+            updateAvailabilityPanel(targetDate);
+
+            // Construct reservation query block for WhatsApp dispatch
+            const dateParts = targetDate.split('-');
+            const clickedDate = new Date(parseInt(dateParts[0]), parseInt(dateParts[1])-1, parseInt(dateParts[2]));
+            const dayOfWeek = clickedDate.getDay();
+            const activePreset = (dayOfWeek === 5) ? config.events.friday : config.events.saturday;
+
+            const finalTitle = daySeats.title_en || activePreset.title_en;
+            const finalWhere = daySeats.where || activePreset.where;
+            const finalFee = daySeats.fee || activePreset.fee;
+
+            const messageText = `*SEOUL JUNCTION RESERVATION FORM* 🥂\n\n` +
+                                `• Name: ${fullName}\n` +
+                                `• Group: ${natGroup === 'kr' ? '🇰🇷 Korean (한국인)' : '🌐 Foreigner (외국인)'}\n` +
+                                `• Gender: ${gender}\n` +
+                                `• Phone/WhatsApp: ${whatsappNo}\n` +
+                                `• Languages Spoken: ${languages}\n` +
+                                `• Selected Date: ${targetDate}\n` +
+                                `• Selected Event: ${finalTitle}\n` +
+                                `• Venue: ${finalWhere}\n` +
+                                `• Fee: ${finalFee} (Pending FPS verification to +852 5402 8803)\n\n` +
+                                `*Please review my request and confirm seat placement.*`;
+
+            const whatsAppTarget = "85254028803";
+            const waUrl = `https://wa.me/${whatsAppTarget}?text=${encodeURIComponent(messageText)}`;
+
+            // Open whatsapp redirection in fresh tab
+            window.open(waUrl, '_blank');
+
+            // Show custom application success window
+            const modal = document.getElementById('success-modal');
+            const modalContent = modal.querySelector('div');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        }
+
+        // Dismiss dynamic dialog boxes
+        function closeModal() {
+            const modal = document.getElementById('success-modal');
+            const modalContent = modal.querySelector('div');
+            
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            
+            document.getElementById('junction-rsvp-form').reset();
+            
+            // Clear custom toggles
+            selectedNat = '';
+            selectedGender = '';
+            document.getElementById('input-nationality').value = '';
+            document.getElementById('input-gender').value = '';
+            document.getElementById('card-nat-kr').className = "border border-slate-200 hover:border-[#FF5E3A] hover:bg-[#FF5E3A]/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+            document.getElementById('card-nat-foreigner').className = "border border-slate-200 hover:border-teal-500 hover:bg-teal-500/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+            document.getElementById('btn-gender-male').className = "border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900";
+            document.getElementById('btn-gender-female').className = "border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900";
+        }
+
+        // Select Nationality / Group
+        function selectNationality(type) {
+            selectedNat = type;
+            document.getElementById('input-nationality').value = type;
+
+            const krCard = document.getElementById('card-nat-kr');
+            const forCard = document.getElementById('card-nat-foreigner');
+
+            if (type === 'kr') {
+                krCard.className = "border-2 border-[#FF5E3A] bg-[#FF5E3A]/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+                forCard.className = "border border-slate-200 hover:border-teal-500 hover:bg-teal-500/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+            } else {
+                krCard.className = "border border-slate-200 hover:border-[#FF5E3A] hover:bg-[#FF5E3A]/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+                forCard.className = "border-2 border-teal-500 bg-teal-500/5 rounded-2xl p-5 text-center flex flex-col items-center justify-center transition-all duration-300";
+            }
+        }
+
+        // Select Gender
+        function selectGender(gender) {
+            selectedGender = gender;
+            document.getElementById('input-gender').value = gender;
+
+            const btnMale = document.getElementById('btn-gender-male');
+            const btnFemale = document.getElementById('btn-gender-female');
+
+            if (gender === 'Male') {
+                btnMale.className = "border-2 border-slate-800 bg-slate-900 text-white text-sm font-extrabold py-3 rounded-xl transition-all duration-300";
+                btnFemale.className = "border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900";
+            } else {
+                btnMale.className = "border border-slate-200 hover:border-slate-800 text-sm font-extrabold py-3 rounded-xl transition-all duration-300 text-slate-600 hover:text-slate-900";
+                btnFemale.className = "border-2 border-slate-800 bg-slate-900 text-white text-sm font-extrabold py-3 rounded-xl transition-all duration-300";
+            }
+        }
+
+        // Admin Access Control Portal Functions
+        function openAdminPortal() {
+            const modal = document.getElementById('admin-auth-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('admin-passcode-input').focus();
+        }
+
+        // Symmetrically dismiss admin dialogs
+        function closeAdminAuth() {
+            const modal = document.getElementById('admin-auth-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.getElementById('admin-passcode-input').value = '';
+            document.getElementById('admin-auth-error').classList.add('hidden');
+        }
+
+        function verifyAdminPasscode() {
+            const inputVal = document.getElementById('admin-passcode-input').value;
+            const targetPasscode = window.seoulJunctionConfig.metadata.passcode;
+
+            if (inputVal === targetPasscode) {
+                closeAdminAuth();
+                const data = window.seoulJunctionConfig;
+                document.getElementById('edit-refund-kr').value = data.refund.policy_kr;
+                document.getElementById('edit-refund-en').value = data.refund.policy_en;
+                openAdminDashboard();
+            } else {
+                document.getElementById('admin-auth-error').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

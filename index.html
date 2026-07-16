@@ -1,39 +1,79 @@
-window.seoulJunctionConfig = {
-    // ... (상단 설정은 그대로 두세요)
-    hero: {
-        // ... (내용 생략)
-        gallery: [
-            { img: "/1.png", cap_en: "1. Welcome & Check-In! 🏷️", cap_kr: "1. 웰컴 체크인! 🏷️" },
-            { img: "/2.png", cap_en: "2. Custom Name Tag! 🏷️", cap_kr: "2. 네임택 완성! 🏷️" },
-            { img: "/3.png", cap_en: "3. Somaek Brewing! ✨", cap_kr: "3. 소맥 살롱! ✨" },
-            { img: "/4.png", cap_en: "4. Ice-Breaker Cheers! 🍺", cap_kr: "4. 첫 건배! 🍺" },
-            { img: "/5.png", cap_en: "5. Korean Language Game! 🃏", cap_kr: "5. 한국어 게임! 🃏" },
-            { img: "/6.png", cap_en: "6. Table Rotation! 🔄", cap_kr: "6. 자리 이동! 🔄" },
-            { img: "/7.png", cap_en: "7. Cantonese Exchange! 🌐", cap_kr: "7. 광둥어 학습! 🌐" },
-            { img: "/8.png", cap_en: "8. Group Photo! 📸", cap_kr: "8. 단체 촬영! 📸" }
-        ]
-    },
-    programFlowGallery: [
-        { img: "/1.png", title_en: "1. Arrival", title_kr: "1. 입장", desc_en: "Step into our Pocha.", desc_kr: "포차 입장" },
-        { img: "/2.png", title_en: "2. Name Tag", title_kr: "2. 네임택", desc_en: "Write your tag.", desc_kr: "네임택 작성" },
-        { img: "/3.png", title_en: "3. Somaek", title_kr: "3. 소맥", desc_en: "Brewing ratio.", desc_kr: "소맥 제조" },
-        { img: "/4.png", title_en: "4. Cheers", title_kr: "4. 건배", desc_en: "Ice-breaker toast.", desc_kr: "첫 건배" },
-        { img: "/5.png", title_en: "5. Korean", title_kr: "5. 한국어", desc_en: "Slang games.", desc_kr: "유행어 게임" },
-        { img: "/6.png", title_en: "6. Rotate", title_kr: "6. 로테이션", desc_en: "Bell rotation.", desc_kr: "테이블 이동" },
-        { img: "/7.png", title_en: "7. Language", title_kr: "7. 언어교환", desc_en: "Local slang.", desc_kr: "실전 광둥어" },
-        { img: "/8.png", title_en: "8. Photo", title_kr: "8. 포토", desc_en: "Group photo.", desc_kr: "단체 사진" }
-    ],
-    ticketGallery: ["/1.png", "/2.png", "/3.png", "/4.png", "/5.png", "/6.png", "/7.png", "/8.png"],
-    design: {
-        seating_image: "/4.png",
-        ticket_image: "/8.png"
-    }
-    // ... (이하 나머지 설정은 그대로 유지)
-};
-```
-
-**중요 체크:**
-1. 코드 수정 후 반드시 깃허브에 **`Commit & Push`**를 해주세요.
-2. Vercel 배포가 완료될 때까지 1~2분 정도 기다린 뒤, 웹사이트에서 **`Ctrl + F5`**를 눌러 새로고침해 보세요.
-
-이제 이미지가 제대로 나올 거예요! 수정하시다가 막히는 부분이 있으면 바로 말씀해 주세요.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Junction | Your Weekend Escape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0B0F19; color: white; }
+    </style>
+</head>
+<body class="pb-16">
+    <!-- Header -->
+    <nav class="max-w-xl mx-auto p-6">
+        <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
+            SEOUL JUNCTION
+        </h1>
+        <p class="text-gray-400 mt-1">Your Friday Escape in Hong Kong 🥂</p>
+    </nav>
+    <main class="max-w-xl mx-auto px-4 space-y-12">
+        
+        <!-- Timeline Section -->
+        <section class="space-y-6">
+            <h2 class="text-xl font-bold border-l-4 border-orange-500 pl-3">Experience Timeline</h2>
+            
+            <div class="grid gap-6">
+                <!-- 1 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="1.png" alt="Arrival" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">1. Arrival & Check-in</h3></div>
+                </div>
+                <!-- 2 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="2.png" alt="Settle down" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">2. Settle Down & Name Tag</h3></div>
+                </div>
+                <!-- 3 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="3.png" alt="Somaeck" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">3. Somaeck Ratio Brewing</h3></div>
+                </div>
+                <!-- 4 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="4.png" alt="Ice-breaker" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">4. Sincere Ice-Breaker Cheer</h3></div>
+                </div>
+                <!-- 5 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="5.png" alt="Korean Only" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">5. Speak Only in Korean</h3></div>
+                </div>
+                <!-- 6 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="6.png" alt="Bell Ring" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">6. Clang-Clang Bell Ring</h3></div>
+                </div>
+                <!-- 7 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="7.png" alt="Exchange" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">7. Real Cantonese & English Exchange</h3></div>
+                </div>
+                <!-- 8 -->
+                <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+                    <img src="8.png" alt="Photo" class="w-full h-48 object-cover">
+                    <div class="p-4"><h3 class="font-bold">8. Photo Session & Contact Exchange</h3></div>
+                </div>
+            </div>
+        </section>
+        <!-- Booking CTA -->
+        <div class="fixed bottom-0 left-0 w-full p-4 bg-gray-950 border-t border-gray-800">
+            <button onclick="window.location.href='https://wa.me/85254028803'" 
+                    class="w-full py-4 bg-gradient-to-r from-orange-500 to-pink-600 rounded-xl font-black text-lg shadow-lg">
+                Book Your Friday Seat →
+            </button>
+        </div>
+    </main>
+</body>
+</html>
